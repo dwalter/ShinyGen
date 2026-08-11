@@ -30,7 +30,7 @@ and new accounts include free gems for AI generation.
 <!doctype html>
 <canvas id="canvas"></canvas>
 
-<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.0-rc.13/shinygen.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.0-rc.14/shinygen.js"></script>
 <script type="text/gdscript" name="Main">
 extends Node3D
 
@@ -142,7 +142,14 @@ configures connectors. Authorization uses OAuth with three scoped permissions:
 |---|---|
 | `projects.read` | See your project: what is on screen, the focused document, and its current state. |
 | `projects.write` | Write and edit game code and asset documents. Code edits are free. |
-| `assets.generate` | Run AI generation (images, 3D models, audio). Spends gems, with a daily cap. |
+| `assets.generate` | Run AI generation (images, 3D models, audio). Spends gems, with a daily gem cap. |
+
+Writing code is always free; only generation spends gems. On the free tier, your first connection
+starts a 30-day full-connector trial, after which a weekly allowance limits how many actions an
+assistant can take — reading is never limited, and paid members are not subject to it.
+
+**Prefer not to wire up a connector?** Shiny Gen has its own AI agent built into the app, with the same
+abilities — reading your project, writing game code, generating assets, and play-testing what it builds.
 
 See [Connect Claude or ChatGPT](docs/mcp.md).
 

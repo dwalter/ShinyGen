@@ -39,15 +39,42 @@ your live session, so the app must be running.
 |---|---|
 | `projects.read` | See your project: what is on screen, the focused document, and its current state. |
 | `projects.write` | Write and edit game code and asset documents. Code edits are free. |
-| `assets.generate` | Run AI generation (images, 3D models, audio); this spends your gems, and a daily cap limits how much a connected assistant can spend. |
+| `assets.generate` | Run AI generation (images, 3D models, audio); this spends your gems, and a daily gem cap limits how much a connected assistant can spend in one day. |
 
 ## What a connected assistant can do
 
 - Read what is on screen and which document is focused.
 - Write or patch the game's GDScript; the game compiles, runs, and reports errors back with line numbers.
+- Start a **new game** for you, list the games in your account, and open any one of them — so you can say "go back to the platformer" and it will.
 - Take screenshots to see what you see, including frame bursts to check motion.
-- Press keys and actions on the running game to play-test what it built.
-- Generate images, 3D models, and audio with Shiny Gen's generation models.
+- Press keys and actions on the running game to play-test what it built, including whole input timelines when a game needs two controls at once.
+- Generate images, 3D models, and audio with Shiny Gen's generation models, browse and restore earlier versions of an asset, and remove an image's background.
+- Build and edit 3D models and 2D art as code, and render views of a model to check it.
+- Get a share link for the game it has been working on.
+
+## What it costs, and the limits
+
+Connecting is free, and **writing code is always free** — only AI generation spends gems. Two separate
+limits apply to an assistant working in your project:
+
+- **A daily gem cap.** Caps how many gems a connected assistant can spend in a single day, so an
+  assistant left running cannot drain your balance. Every paid result reports your gems before, spent,
+  and remaining.
+- **A weekly action allowance on the free tier.** Your first connection starts a **30-day
+  full-connector trial**. After that, free accounts get an allowance of assistant actions that change
+  something (writing code, generating, running the game) per week — currently about 1,000, reset
+  weekly. **Reading is never limited**, and **paid members are not subject to this allowance** at all.
+  The connector reports your current status and when the allowance resets.
+
+## The AI agent built into the app
+
+You do not need an outside assistant at all: Shiny Gen has its own AI agent built into the app, with
+the same abilities described on this page — it reads your project, writes game code, generates assets,
+and play-tests what it builds. Connect Claude or ChatGPT when you would rather drive from a tool you
+already use; otherwise the in-app agent is right there.
+
+Both work the same way where it counts: code editing is free, generation spends gems, and the daily
+gem cap and the free-tier weekly allowance apply to both.
 
 ## The docs travel with the connector
 
@@ -62,7 +89,7 @@ The same game-code surface is published here as the
 
 - Permissions are scoped and revocable; disconnect at any time.
 - Everything the assistant does happens in your open tab; you watch edits live and can pause or stop it from the app.
-- Writing code is free; only AI generation spends gems, with a daily cap for connected assistants. Every generation reports your remaining balance.
+- Writing code is free; only AI generation spends gems, with a daily gem cap for connected assistants. Every generation reports your remaining balance.
 
 ---
 

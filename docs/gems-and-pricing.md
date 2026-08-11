@@ -29,10 +29,14 @@ New accounts start with free gems.
 
 Current prices are shown in the app.
 
-## Connected AI assistants
+## AI assistants
 
-If you [connect Claude or ChatGPT](mcp.md), code edits are free; only AI generation the assistant runs
-spends your gems, and a daily cap limits how much a connected assistant can spend.
+This applies both to Shiny Gen's built-in AI agent and to an outside assistant you
+[connect over MCP](mcp.md): code edits are free, and only AI generation the assistant runs spends your
+gems. A daily gem cap limits how much an assistant can spend in one day, and on the free tier a weekly
+allowance limits how many actions it can take — after a 30-day trial that starts at your first
+connection. Reading is never limited, and paid members are not subject to the weekly allowance. See
+[Connect Claude or ChatGPT](mcp.md) for the details.
 
 ## Ownership and commercial use
 

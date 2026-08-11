@@ -21,7 +21,7 @@ For full control, put the engine script tag and your game's GDScript on any page
 <!doctype html>
 <canvas id="canvas"></canvas>
 
-<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.0-rc.13/shinygen.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.0-rc.14/shinygen.js"></script>
 <script type="text/gdscript" name="Main">
 extends Node3D
 
@@ -89,7 +89,7 @@ After boot, `ShinyGen.renderer` reports which engine is running (`"webgpu"` or `
 
 ## Good to know
 
-- The engine ships brotli-compressed (**~7.6 MB** over the wire for the WebGPU engine, **~6.5 MB** for the WebGL engine; decompressed in the browser), streamed from the CDN or your host. Only the engine your page boots is downloaded, and embedded pages need a network connection to load.
+- The engine ships brotli-compressed (**~8.7 MB** over the wire for the WebGPU engine, **~6.6 MB** for the WebGL engine; decompressed in the browser), streamed from the CDN or your host. Only the engine your page boots is downloaded, and embedded pages need a network connection to load.
 - Pin a version and your page keeps working identically regardless of later engine releases.
 - Games are written in GDScript, the Godot engine's scripting language, running in a sandboxed subset. The exact supported surface is the [GDScript API reference](gdscript-api-reference.md).
 - You own the games you make and can publish them commercially. See the [FAQ](faq.md).
