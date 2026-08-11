@@ -1,6 +1,6 @@
 <div align="center">
 
-# Shiny Gen
+<img src="shiny_gen_ai_with_background.png" alt="Shiny Gen AI" width="720">
 
 ### Make Godot games with AI, in your browser
 
