@@ -4,8 +4,8 @@
 
 A Shiny Gen game can run natively on any web page (your portfolio, blog, or game site) via the
 `shinygen` npm package. One script tag loads the engine, and it runs the game's GDScript directly on
-your page. It is **not an iframe**: the engine boots on your canvas, WebGPU-rendered by default with a
-WebGL2 fallback for browsers without WebGPU.
+your page. It is **not an iframe**: the engine boots on your canvas. By default it picks the engine per
+device: a desktop gets WebGPU when it supports it, and phones, tablets and browsers without WebGPU get WebGL.
 
 ## The easy way: export your game
 
@@ -23,7 +23,7 @@ For full control, put the engine script tag and your game's GDScript on any page
 <!doctype html>
 <canvas id="canvas"></canvas>
 
-<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.0-rc.14/shinygen.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.5/shinygen.js"></script>
 <script type="text/gdscript" name="Main">
 extends Node3D
 
@@ -76,7 +76,8 @@ can serve the package from any static host, CDN, or bundler with no configuratio
 ```js
 ShinyGen.start({
   canvas: "#canvas",   // selector or element (required)
-  renderer: "webgpu",  // "webgpu" (default) or "webgl" (the WebGL2 engine at webgl/)
+  renderer: "auto",    // "auto" (default: chosen per device), "webgpu" or "webgl" (one engine, no fallback)
+  engineBase: "...",   // where the lanes live (default: beside shinygen.js)
   i18n: true,          // opt-in: fetch ICU data (~2.2 MB) for complex-script text
   brotliWasm: false,   // opt-out of the .br engine fetch (default: on)
 });
@@ -86,13 +87,14 @@ After boot, `ShinyGen.renderer` reports which engine is running (`"webgpu"` or `
 
 ## Requirements
 
-- **Default (WebGPU engine):** a WebGPU-capable browser (Chrome/Edge 113+ on desktop; recent Safari and Firefox). `ShinyGen.start()` reports a clear on-canvas message when WebGPU is unavailable.
-- **WebGL engine** (`renderer: "webgl"`): any WebGL2 browser — effectively all modern browsers. Renders with the engine's Compatibility renderer: full 2D and core 3D (PBR forward rendering, shadows), without the WebGPU-only effects (volumetric fog, SDFGI/VoxelGI and most screen-space effects).
+- **Default: either engine, chosen per device** (no `renderer`, or `renderer: "auto"`): the same choice the Shiny Gen web app makes. Phones and tablets get the WebGL engine; a desktop gets WebGPU when it has a hardware adapter and device, WebGL otherwise. If the WebGPU engine fails to start or loses its device, the page reloads once into WebGL and remembers that for the tab. `?lane=webgl` or `?lane=webgpu` pins a lane for 30 days, and `?lane=auto` clears the pin.
+- **WebGPU engine only** (`renderer: "webgpu"`): a WebGPU-capable browser (Chrome/Edge 113+ on desktop; recent Safari and Firefox). No fallback: `ShinyGen.start()` reports a clear on-canvas message when WebGPU is unavailable, and `?lane=` is ignored.
+- **WebGL engine only** (`renderer: "webgl"`): any WebGL2 browser, effectively all modern browsers. Renders with the engine's Compatibility renderer: full 2D and core 3D (PBR forward rendering, shadows), without the WebGPU-only effects (volumetric fog, SDFGI/VoxelGI and most screen-space effects). `?lane=` is ignored.
 
 ## Good to know
 
 - The engine ships brotli-compressed (**~8.7 MB** over the wire for the WebGPU engine, **~6.6 MB** for the WebGL engine; decompressed in the browser), streamed from the CDN or your host. Only the engine your page boots is downloaded, and embedded pages need a network connection to load.
-- Pin a version and your page keeps working identically regardless of later engine releases.
+- Pin a version and your page keeps working the same way regardless of later engine releases.
 - Games are written in GDScript, the Godot engine's scripting language, running in a sandboxed subset. The exact supported surface is the [GDScript API reference](gdscript-api-reference.md).
 - You own the games you make and can publish them commercially. See the [FAQ](faq.md).
 

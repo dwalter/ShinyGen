@@ -6,7 +6,7 @@ Shiny Gen is an **AI game maker that runs in your browser**: describe a game, pl
 assets, code, and world with built-in AI tools. Games run on the Godot engine and are written in
 GDScript. Shiny Gen is free to use, with paid credits for AI generation only. It also ships an MCP
 server so AI assistants like Claude and ChatGPT can build alongside you, and a `shinygen` npm package
-for embedding games on the web. iOS and Android apps are coming soon.
+for embedding games on the web. The Android app is on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai); the iOS app is coming soon.
 
 Think of it as a sandbox with an AI asset editor built in: describe what you want, and it appears in a
 world you can play and share.
@@ -65,7 +65,7 @@ on any website via the `shinygen` npm package.
 
 - **Not a hosted prototype box:** your game is a real Godot project you own, not a clip locked to one page.
 - **Not just a 3D renderer** like Three.js: it is a whole game engine, so you do not hand-code physics, scenes, or tooling.
-- **Not a desktop download:** it runs in the browser, with iOS and Android apps coming soon.
+- **Not a desktop download:** it runs in the browser, and as an Android app on Google Play, with an iOS app coming soon.
 - **Not a Godot plugin:** it is a standalone product built on Godot; you never install Godot.
 - **Not related to Shiny**, the R/Python web framework by Posit.
 - **Not related to** Pokémon shiny hunting.
@@ -77,7 +77,7 @@ on any website via the `shinygen` npm package.
 | **Product** | Shiny Gen: AI game maker |
 | **Engine** | Godot (customized fork with a WebGPU renderer, compiled to WebAssembly) |
 | **Game code** | GDScript (runs in a sandboxed subset for security) |
-| **Runs on** | Any modern web browser; iOS and Android apps coming soon |
+| **Runs on** | Any modern web browser; Android app on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai); iOS app coming soon |
 | **Pricing** | Free to use; gem credits for AI generation only. No subscription required: one-time gem packs that never expire, or an optional membership that adds monthly gems |
 | **Built-in editors** | Game code (GDScript) · 3D models · Images · Audio & music |
 | **AI generation** | Game code, images, sprite animations, 3D models, sound effects, and music, using leading models including Claude and Gemini |

@@ -30,7 +30,7 @@ reference, since there are no lambdas.
 
 ### Node3D — extends Node
 - Properties: position: Vector3, rotation: Vector3, rotation_degrees: Vector3, scale: Vector3, visible: bool, transform: Transform3D, global_transform: Transform3D
-- Methods: look_at (1-2 args), look_at_from_position (2-3 args), rotate (2 args), rotate_object_local (2 args), rotate_x (1 arg), rotate_y (1 arg), rotate_z (1 arg), play_animation (1-2 args), stop_animation (0 args)
+- Methods: look_at (1-2 args), look_at_from_position (2-3 args), rotate (2 args), rotate_object_local (2 args), rotate_x (1 arg), rotate_y (1 arg), rotate_z (1 arg), play_animation (1-2 args), stop_animation (0 args), set_part_color (2 args), get_part_color (1 arg), set_tint (1 arg), get_tint (0 args), set_part_visible (2 args), is_part_visible (1 arg), set_draw_on_top (1 arg), is_draw_on_top (0 args), set_depth_push (1 arg), get_depth_push (0 args), reset_appearance (0 args), get_build_params (0 args)
 
 ### GeometryInstance3D — extends Node3D *(not instantiable — obtained from the engine)*
 - Properties: cast_shadow: int
@@ -76,7 +76,7 @@ reference, since there are no lambdas.
 - Properties: collision_layer: int, collision_mask: int
 
 ### RigidBody3D — extends Node3D
-- Properties: mass: float, gravity_scale: float, linear_velocity: Vector3, angular_velocity: Vector3, linear_damp: float, angular_damp: float, sleeping: bool, can_sleep: bool, physics_material_override: PhysicsMaterial, collision_layer: int, collision_mask: int
+- Properties: mass: float, gravity_scale: float, linear_velocity: Vector3, angular_velocity: Vector3, linear_damp: float, angular_damp: float, sleeping: bool, can_sleep: bool, physics_material_override: PhysicsMaterial, collision_layer: int, collision_mask: int, continuous_cd: bool
 - Methods: apply_central_impulse (1 arg), apply_impulse (1-2 args)
 
 ### Area3D — extends Node3D
@@ -102,7 +102,7 @@ reference, since there are no lambdas.
 ### Marker2D — extends Node2D
 
 ### CanvasLayer — extends Node
-- Properties: layer: int, visible: bool, offset: Vector2
+- Properties: layer: int, visible: bool, offset: Vector2, world_anchored: bool
 - Methods: show (0 args), hide (0 args)
 
 ### AudioStreamPlayer2D — extends Node2D
@@ -146,8 +146,9 @@ reference, since there are no lambdas.
 - Constants: CharacterBody2D.PLATFORM_ON_LEAVE_ADD_VELOCITY, CharacterBody2D.PLATFORM_ON_LEAVE_ADD_UPWARD_VELOCITY, CharacterBody2D.PLATFORM_ON_LEAVE_DO_NOTHING
 
 ### RigidBody2D — extends PhysicsBody2D
-- Properties: mass: float, gravity_scale: float, linear_velocity: Vector2, angular_velocity: float, lock_rotation: bool, contact_monitor: bool, max_contacts_reported: int, sleeping: bool, physics_material_override: PhysicsMaterial
+- Properties: mass: float, gravity_scale: float, linear_velocity: Vector2, angular_velocity: float, lock_rotation: bool, contact_monitor: bool, max_contacts_reported: int, sleeping: bool, physics_material_override: PhysicsMaterial, continuous_cd: int
 - Methods: apply_central_impulse (1 arg), apply_impulse (1-2 args)
+- Constants: RigidBody2D.CCD_MODE_DISABLED, RigidBody2D.CCD_MODE_CAST_RAY, RigidBody2D.CCD_MODE_CAST_SHAPE
 - Signals: body_entered, body_exited
 
 ### Area2D — extends CollisionObject2D
@@ -326,7 +327,7 @@ reference, since there are no lambdas.
 - Properties: environment: Environment
 
 ### EmbedderHost — extends Node *(not instantiable — obtained from the engine)*
-- Methods: get_shader (1 arg), load_texture (1 arg), load_audio (1 arg), load_model (1 arg), report_status (1 arg)
+- Methods: get_shader (1 arg), load_texture (1 arg), load_audio (1 arg), load_model (1-2 args), load_texture_async (1 arg), load_audio_async (1 arg), load_model_async (1 arg), report_status (1 arg), set_safe_frame_aspect (1 arg), set_tick_mode (1 arg), set_physics_clock (1 arg), get_physics_clock (0 args), set_design_size (2 args), set_design_rect_portrait (4 args), set_virtual_controls (1 arg), set_multiplayer (1 arg), set_tilt_controls (1 arg), game_focused (0 args), app_focused (0 args), set_local_seats (1 arg), local_seats (0 args)
 
 ### Viewport — extends Node *(not instantiable — obtained from the engine)*
 - Methods: get_visible_rect (0 args), get_texture (0 args), get_camera_3d (0 args), get_mouse_position (0 args)
@@ -369,7 +370,7 @@ reference, since there are no lambdas.
 - Methods: set_trans (1 arg), set_ease (1 arg), set_delay (1 arg)
 
 ### ShinyEntity *(not instantiable — obtained from the engine)*
-- Properties: position: Vector3, rotation_degrees: Vector3, height: float, orientation: String, visible: bool, health: float, name: String, id: String
+- Properties: position: Vector3, rotation_degrees: Vector3, height: float, orientation: String, visible: bool, name: String, id: String
 - Methods: alive (0 args), get_state (1-2 args), set_state (2 args), run_event (1 arg), add_event (2 args), set_events (2 args), stop_events (0 args), has_running_events (0 args), emit_signal_uid (1 arg), remove (0 args), add_child (1 arg), move_by (1-2 args), jump (0 args), move_toward_player (0-1 args), move_away_player (0-1 args), move_toward (1-2 args)
 - Signals: touched, player_collided
 
@@ -455,7 +456,7 @@ reference, since there are no lambdas.
 - Constants: Image.FORMAT_L8, Image.FORMAT_LA8, Image.FORMAT_R8, Image.FORMAT_RG8, Image.FORMAT_RGB8, Image.FORMAT_RGBA8
 
 ### ImageTexture — extends Texture2D
-- Methods: set_speed_scale (1 arg), get_speed_scale (0 args), set_paused (1 arg), is_paused (0 args)
+- Methods: set_speed_scale (1 arg), get_speed_scale (0 args), set_paused (1 arg), is_paused (0 args), update (1 arg)
 - Static methods: ImageTexture.create_from_image (1 arg)
 
 ### AtlasTexture — extends Texture2D
@@ -555,16 +556,16 @@ reference, since there are no lambdas.
 ## Globals & facades
 
 ### Global host functions
-- after (2 args), create_tween (0 args), save_var (2 args), load_var (1-2 args), load (1 arg)
+- after (2 args), create_tween (0 args), load (1 arg)
 
 ### Time
 - Methods: get_ticks_msec (0 args), get_ticks_usec (0 args)
 
 ### Input
-- Methods: is_action_pressed (1 arg), is_action_just_pressed (1 arg), is_action_just_released (1 arg), get_axis (2 args), get_vector (4-5 args), is_key_pressed (1 arg)
+- Methods: is_action_pressed (1-2 args), is_action_just_pressed (1-2 args), is_action_just_released (1-2 args), get_action_strength (1-2 args), get_axis (2-3 args), get_vector (4-6 args), is_key_pressed (1 arg), get_connected_joypads (0 args), is_joy_button_pressed (2 args), get_joy_axis (2 args), on_joy_connection_changed (1 arg), get_gravity (0 args), get_accelerometer (0 args), get_gyroscope (0 args), get_magnetometer (0 args)
 
 ### world
-- Methods: set_environment (1 arg), pointer (0 args)
+- Methods: set_environment (1 arg), pointer (0 args), pointer_world (0 args), touches (0 args), wheel (0 args), chrome (0 args), budget (0 args), on_surface (2-3 args)
 
 ### JSON
 - Methods: parse_string (1 arg), stringify (1 arg)
@@ -579,10 +580,16 @@ reference, since there are no lambdas.
 - Methods: find (1 arg), find_all (1 arg), all (0 args), nearby (2 args), player (0 args), spawn (2 args), on_entity_added (1 arg), on_entity_removed (1 arg), on_entity_touched (1 arg), on_signal (2 args)
 
 ### Camera
-- Methods: follow (1 arg), follow_player (0 args), look_at_position (1 arg), set_distance (1 arg), set_mode (1 arg), set_projection (1 arg), set_offset (1 arg), set_rotate_enabled (1 arg), shake (2 args)
+- Methods: follow (1 arg), follow_player (0 args), shake (2 args)
 
 ### Settings
 - Methods: get_setting (1 arg), set_setting (2 args)
+
+### Save
+- Methods: set (2 args), get (1-2 args), delete (1 arg), has (1 arg), clear (0 args), set_min_version (1 arg), get_version (0 args), get_min_version (0 args)
+
+### Room
+- Methods: active (0 args), me (0 args), peers (0 args), is_host (0 args), sync (2 args), desync (1 arg), peer_objects (1 arg), send (1 arg), send_to (2 args), on_message (1 arg), on_join (1 arg), on_leave (1 arg), state_set (2 args), state_allow (1 arg), state_get (1-2 args), on_state (1 arg), request_host (0-2 args), request_join (1-2 args), request_leave (0-1 args), open_menu (0 args), close_menu (0 args), menu_open (0 args), on_menu (1 arg)
 
 ## Built-in functions
 

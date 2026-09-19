@@ -27,6 +27,12 @@ Email us with **"BUG REPORT"** in the subject line and include:
 - What you expected to happen
 - What actually happened
 
+## How do I report content that breaks the rules?
+
+Email support@shinygen.ai and tell us what you saw and where. If it is a shared game, include its share
+link, because that is what lets us find it. A person reads every report. What is and is not allowed is
+set out in the [Community Rules](https://shinygen.ai/community-rules).
+
 ## What's your refund policy?
 
 Gem purchases are final and non-refundable, except where required by applicable law. Gems are spent on

@@ -13,7 +13,7 @@ New here? Read [What is Shiny Gen?](what-is-shiny-gen.md) first, then pick a gui
 | [Connect Claude or ChatGPT (MCP)](mcp.md) | Let an AI assistant build in your live project through the hosted MCP server. |
 | [Gems and pricing](gems-and-pricing.md) | What's free, what uses gems, and how buying gems works. |
 | [Embed games on your website](embed.md) | Run a Shiny Gen game on any web page with the `shinygen` npm package. |
-| [Examples](examples.md) | All 70 playable examples. |
+| [Examples](examples.md) | All 99 playable examples. |
 | [GDScript API reference](gdscript-api-reference.md) | The exact supported API surface for game code. |
 | [Support](support.md) | Contact, technical requirements, and bug reports. |
 

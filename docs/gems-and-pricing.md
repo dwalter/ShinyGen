@@ -2,8 +2,8 @@
 
 > Canonical version: **<https://shinygen.ai/docs/credits>**
 
-Shiny Gen is free to use, and no subscription is required. Building, playing, and sharing games costs
-nothing; AI generation spends gem credits. You can buy gem packs that never expire, or an optional
+Shiny Gen is free to use, and no subscription is required. Playing and sharing games costs
+nothing, and so does building by hand; AI generation and the built-in AI agent spend gem credits. You can buy gem packs that never expire, or an optional
 membership that adds monthly gems.
 
 ## What's free
@@ -14,9 +14,10 @@ membership that adds monthly gems.
 
 ## What uses gems
 
-Gems are Shiny Gen's credit currency, and they are spent only on AI generation: images, sprite
-animations, 3D models, sound effects, and music. Each generation shows its gem cost before you run it,
-and your balance is always visible in the app.
+Gems are Shiny Gen's credit currency. They are spent on AI generation (images, sprite animations, 3D
+models, sound effects, and music) and on the built-in AI agent, which spends gems for each chat step
+based on the model you pick. Each generation shows its gem cost before you run it, the agent's model
+picker shows what each model costs, and your balance is always visible in the app.
 
 ## Free gems
 

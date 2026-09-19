@@ -30,7 +30,7 @@ and new accounts include free gems for AI generation.
 <!doctype html>
 <canvas id="canvas"></canvas>
 
-<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.0-rc.14/shinygen.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/shinygen@4.6.5/shinygen.js"></script>
 <script type="text/gdscript" name="Main">
 extends Node3D
 
@@ -108,17 +108,17 @@ Click any example to play it, then remix it with AI.
 
 |  |  |  |
 |:--:|:--:|:--:|
-| [<img src="previews/Hollow_Farm.png" width="240"><br>**Hollow Farm**](https://shinygen.ai/gen/Hollow_Farm) | [<img src="previews/Shiny_2D_Adventure.png" width="240"><br>**Shiny 2D Adventure**](https://shinygen.ai/gen/Shiny_2D_Adventure) | [<img src="previews/Shiny_Platformer.png" width="240"><br>**Shiny Platformer**](https://shinygen.ai/gen/Shiny_Platformer) |
-| [<img src="previews/Nightfall_Protocol.png" width="240"><br>**Nightfall Protocol**](https://shinygen.ai/gen/Nightfall_Protocol) | [<img src="previews/Spirited_Circuit.png" width="240"><br>**Spirited Circuit**](https://shinygen.ai/gen/Spirited_Circuit) | [<img src="previews/Shiny_Aquarium.png" width="240"><br>**Shiny Aquarium**](https://shinygen.ai/gen/Shiny_Aquarium) |
+| [<img src="https://shinygen.ai/previews/Shiny_Sword_Adventure.png" width="240"><br>**Shiny Sword Adventure**](https://shinygen.ai/gen/Shiny_Sword_Adventure) | [<img src="https://shinygen.ai/previews/Shiny_Dive.png" width="240"><br>**Shiny Aquarium**](https://shinygen.ai/gen/Shiny_Dive) | [<img src="https://shinygen.ai/previews/Shiny_Tribes.png" width="240"><br>**Shiny Tribes**](https://shinygen.ai/gen/Shiny_Tribes) |
+| [<img src="https://shinygen.ai/previews/Shiny_Platformer.png" width="240"><br>**Shiny Platformer**](https://shinygen.ai/gen/Shiny_Platformer) | [<img src="https://shinygen.ai/previews/Shiny_Monster_Catcher.png" width="240"><br>**Shiny Monster Catcher**](https://shinygen.ai/gen/Shiny_Monster_Catcher) | [<img src="https://shinygen.ai/previews/Shiny_Fighter.png" width="240"><br>**Shiny Fighter**](https://shinygen.ai/gen/Shiny_Fighter) |
 | [<img src="https://shinygen.ai/previews/fable-reef.png" width="240"><br>**Reef**](https://shinygen.ai/gen/fable-reef) | [<img src="https://shinygen.ai/previews/black-hole.png" width="240"><br>**Black Hole**](https://shinygen.ai/gen/black-hole) | [<img src="https://shinygen.ai/previews/boids-murmuration.png" width="240"><br>**Murmuration**](https://shinygen.ai/gen/boids-murmuration) |
 
-**[→ All 70 examples](docs/examples.md)**
+**[→ All 99 examples](docs/examples.md)**
 
 ## Embed games on your website
 
 A Shiny Gen game runs natively on any web page — your portfolio, blog, or game site. It is **not an
-iframe**: the engine boots on your canvas, WebGPU-rendered by default with a WebGL2 fallback for
-browsers without WebGPU.
+iframe**: the engine boots on your canvas. By default it picks the engine per device: a desktop gets
+WebGPU when it supports it, and phones, tablets and browsers without WebGPU get WebGL.
 
 The easy way: in the Shiny Gen web app, open the **Share** menu on a game you own and choose **Export for
 the web**. You get a zip with the page, your game, and a README, pinned to an exact engine version, ready
@@ -179,7 +179,7 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 | **Product** | Shiny Gen: AI game maker |
 | **Engine** | Godot (customized fork with a WebGPU renderer, compiled to WebAssembly) |
 | **Game code** | GDScript (runs in a sandboxed subset for security) |
-| **Runs on** | Any modern web browser; iOS and Android apps coming soon |
+| **Runs on** | Any modern web browser; Android app on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai); iOS app coming soon |
 | **Pricing** | Free to use; gem credits for AI generation only. No subscription required |
 | **Built-in editors** | Game code (GDScript) · 3D models · Images · Audio & music |
 | **AI generation** | Game code, images, sprite animations, 3D models, sound effects, and music, using leading models including Claude and Gemini |
@@ -198,7 +198,7 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 | [Connect Claude or ChatGPT](docs/mcp.md) | The hosted MCP server, scopes, and what an assistant can do |
 | [Gems and pricing](docs/gems-and-pricing.md) | What's free, what uses gems, how buying works |
 | [Embed games on your website](docs/embed.md) | The `shinygen` npm package |
-| [Examples](docs/examples.md) | All 70 playable examples |
+| [Examples](docs/examples.md) | All 99 playable examples |
 | [GDScript API reference](docs/gdscript-api-reference.md) | The exact supported API surface for game code |
 | [Support](docs/support.md) | Contact, requirements, bug reports |
 
@@ -206,7 +206,7 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 
 - **Not a hosted prototype box** — your game is a real Godot project you own, not a clip locked to one page.
 - **Not just a 3D renderer** like Three.js — it's a whole game engine, so you don't hand-code physics, scenes, or tooling.
-- **Not a desktop download** — it runs in the browser, with iOS and Android apps coming soon.
+- **Not a desktop download**: it runs in the browser, and as an Android app on Google Play, with an iOS app coming soon.
 - **Not a Godot plugin** — it's a standalone product built on Godot; you never install Godot.
 - **Not related to [Shiny](https://shiny.posit.co/)**, the R/Python web framework by Posit.
 - **Not related to** Pokémon shiny hunting.

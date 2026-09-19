@@ -36,8 +36,9 @@ the [GDScript API reference](gdscript-api-reference.md).
 
 ## What platforms does Shiny Gen run on?
 
-Shiny Gen runs in any modern web browser; there is nothing to install. iOS and Android apps are coming
-soon. Shared games also run in the browser, on desktop or mobile.
+Shiny Gen runs in any modern web browser; there is nothing to install. There is also an Android app on
+[Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai), and an iOS app is coming soon. Shared games also run in the browser, on desktop or
+mobile.
 
 ## Can I sell games I make with Shiny Gen? Who owns them?
 
