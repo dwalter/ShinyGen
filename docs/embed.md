@@ -7,11 +7,13 @@ A Shiny Gen game can run natively on any web page (your portfolio, blog, or game
 your page. It is **not an iframe**: the engine boots on your canvas, WebGPU-rendered by default with a
 WebGL2 fallback for browsers without WebGPU.
 
-## The easy way: download your game
+## The easy way: export your game
 
-In Shiny Gen, open the **Share** menu and choose **Download as HTML**. You get a single HTML file: your
-game's code with the engine reference already wired in, pinned to an exact engine version so the page
-keeps working identically forever. Host that file anywhere, or open it in a browser.
+In the Shiny Gen web app, open the **Share** menu on a game you own and choose **Export for the web**. You
+get a zip with the page, your game, and a README, pinned to an exact engine version so the page keeps
+working the same way. Upload the zip to itch.io, or put the files on any web host. Opening the page
+straight from your disk does not work, because the browser will not let it load the game file; the
+README explains how to test it on your own computer.
 
 ## Build your own page
 

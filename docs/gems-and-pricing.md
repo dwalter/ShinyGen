@@ -8,9 +8,9 @@ membership that adds monthly gems.
 
 ## What's free
 
-- Making games: describing, building, and editing, including all code editing.
+- Building and editing games by hand, including editing their code yourself.
 - Playing your games and games shared with you.
-- Sharing games with links, downloading games as HTML, and importing your own images.
+- Sharing games with links, exporting games you own for the web, and importing your own images.
 
 ## What uses gems
 
@@ -31,10 +31,11 @@ Current prices are shown in the app.
 
 ## AI assistants
 
-This applies both to Shiny Gen's built-in AI agent and to an outside assistant you
-[connect over MCP](mcp.md): code edits are free, and only AI generation the assistant runs spends your
-gems. A daily gem cap limits how much an assistant can spend in one day, and on the free tier a weekly
-allowance limits how many actions it can take — after a 30-day trial that starts at your first
+An outside assistant you [connect over MCP](mcp.md) runs on your own AI plan, so its code edits cost no
+gems; only the AI generation it runs spends your gems. Shiny Gen's built-in AI agent runs its model on
+Shiny Gen, so each of its chat steps spends gems as well. For both, a daily gem cap limits how much an
+assistant can spend in one day, and on the free tier a weekly allowance limits how many actions it can
+take, after a 30-day trial that starts at your first
 connection. Reading is never limited, and paid members are not subject to the weekly allowance. See
 [Connect Claude or ChatGPT](mcp.md) for the details.
 

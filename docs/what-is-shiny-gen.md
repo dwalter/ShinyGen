@@ -27,8 +27,8 @@ and runs it immediately on the engine in your browser.
 **Edit anything with the built-in editors.** Shiny Gen has four AI creation surfaces: a game-code editor
 (GDScript), a 3D model editor, an image editor, and audio generation for sound effects and music.
 
-**Share it.** Every game can be shared with a link. Games can also be downloaded as a single HTML file,
-or embedded on any website with the `shinygen` npm package.
+**Share it.** Every game can be shared with a link. Games you own can also be exported for the web as a
+zip you can host anywhere, or embedded on any website with the `shinygen` npm package.
 
 ## What makes Shiny Gen different
 
@@ -49,17 +49,17 @@ engine plumbing.
 
 ### Its MCP server is hosted, not a desktop bridge
 
-Shiny Gen ships a remote MCP (Model Context Protocol) server at `mcp.shinygen.ai`. Connect Claude,
-ChatGPT, or any MCP client, and the assistant can read your project, write code, generate assets, and
+Shiny Gen ships a remote MCP (Model Context Protocol) server at `mcp.shinygen.ai`. Press Host External
+Agent in the app, connect Claude, ChatGPT, or any MCP client, and the assistant can read your project, write code, generate assets, and
 run the game, live, in your browser project. Other game-engine MCP integrations are bridges to a desktop
 editor running on your machine; Shiny Gen's is hosted, with nothing to install, and access is controlled
 by scoped OAuth permissions.
 
 ### Games live on the web
 
-A Shiny Gen game is a link anyone can open. It can also be downloaded as a single HTML file with its
-engine version pinned, so it keeps working identically forever, or embedded on any website via the
-`shinygen` npm package.
+A Shiny Gen game is a link anyone can open. Its owner can also export it for the web as a zip to upload
+to itch.io or any web host, with its engine version pinned so it keeps working the same way, or embed it
+on any website via the `shinygen` npm package.
 
 ## What Shiny Gen is not
 
@@ -81,7 +81,7 @@ engine version pinned, so it keeps working identically forever, or embedded on a
 | **Pricing** | Free to use; gem credits for AI generation only. No subscription required: one-time gem packs that never expire, or an optional membership that adds monthly gems |
 | **Built-in editors** | Game code (GDScript) · 3D models · Images · Audio & music |
 | **AI generation** | Game code, images, sprite animations, 3D models, sound effects, and music, using leading models including Claude and Gemini |
-| **Sharing & export** | Share links · single-file HTML download · `shinygen` npm embed |
+| **Sharing & export** | Share links · Export for the web (zip) · `shinygen` npm embed |
 | **MCP** | Hosted server at `mcp.shinygen.ai`; works with Claude, ChatGPT, and any MCP client (OAuth: `projects.read`, `projects.write`, `assets.generate`) |
 | **Company** | Shiny AI Technologies, LLC (Massachusetts, USA), founded 2024 |
 | **Contact** | hello@shinygen.ai |

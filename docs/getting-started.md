@@ -35,15 +35,16 @@ automatically so it can fix them; you do not need to read stack traces.
 
 ## 6. Share your game
 
-Share any game with a link. You can also download a game as a single HTML file, or embed it on any
-website with the `shinygen` npm package. See [Embed games on your website](embed.md).
+Share any game with a link. In the web app you can also export a game you own for the web (Share, then
+**Export for the web**) as a zip you can host anywhere, or embed it on any website with the `shinygen`
+npm package. See [Embed games on your website](embed.md).
 
 ## Good to know
 
 - Games are real GDScript on the Godot engine. See [What is Shiny Gen?](what-is-shiny-gen.md)
 - The exact supported API surface for game code is documented in the [GDScript API reference](gdscript-api-reference.md).
 - You own what you make and can use it commercially. See the [FAQ](faq.md).
-- Building, playing, and sharing are free; AI generation uses gems. See [Gems and pricing](gems-and-pricing.md).
+- Playing and sharing are free, and so is building by hand; AI generation and the built-in AI agent use gems. See [Gems and pricing](gems-and-pricing.md).
 - You can also connect an AI assistant like Claude or ChatGPT to build with you. See [Connect Claude or ChatGPT](mcp.md).
 
 ---

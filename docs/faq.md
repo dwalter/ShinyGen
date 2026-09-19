@@ -52,8 +52,9 @@ the rest of your content.
 
 ## Can I export my game from Shiny Gen?
 
-Yes. A game can be downloaded as a single HTML file that runs on any website, with its engine version
-pinned so it keeps working identically forever (the page streams the engine from a CDN). Every game can
+Yes. In the web app, open the **Share** menu on a game you own and choose **Export for the web**. You get
+a zip you can upload to itch.io or any web host, with the engine version pinned so it keeps working the
+same way (the page streams the engine from a CDN). Every game can
 also be shared instantly with a link, and games can be embedded on the web with the `shinygen` npm
 package.
 
@@ -66,8 +67,10 @@ project; there is nothing to install.
 
 ## How do I connect Claude or ChatGPT to Shiny Gen?
 
-Add Shiny Gen as a connector (MCP server) in your AI assistant using the URL
-`https://mcp.shinygen.ai/mcp`, then approve access with your Shiny Gen account. Authorization uses OAuth
+First start hosting in Shiny Gen: open your game, open the **Agent** tab, tap the model name to open the
+AI model picker, choose **Connect external model with MCP**, and press **Host External Agent**. Your
+assistant cannot connect until you do. Then add Shiny Gen as a connector (MCP server) in your AI
+assistant using the URL `https://mcp.shinygen.ai/mcp`, and approve access with your Shiny Gen account. Authorization uses OAuth
 with scoped permissions: `projects.read`, `projects.write`, and `assets.generate`. See
 [Connect Claude or ChatGPT](mcp.md).
 
@@ -80,7 +83,7 @@ A connected assistant can read your project, write and edit game code, generate 
 
 Rosebud AI is a fast way to prompt a playable browser prototype that lives on Rosebud's platform. Shiny
 Gen also builds playable games from a description in the browser, but on the real Godot engine, with
-GDScript code you can open, edit, own, and export as an HTML file that runs anywhere. Rosebud is
+GDScript code you can open, edit, own, and export for the web to run anywhere. Rosebud is
 excellent for quick experiments; Shiny Gen is built for games you keep.
 
 ## How is Shiny Gen different from building with Three.js?

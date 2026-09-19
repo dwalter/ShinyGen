@@ -12,6 +12,11 @@ your machine, Shiny Gen's server is remote and operates the project in your open
 
 ## Connect
 
+**Start hosting in Shiny Gen:** open your game at [shinygen.ai](https://shinygen.ai), open the **Agent**
+tab, tap the model name to open the AI model picker, choose **Connect external model with MCP**, and
+press **Host External Agent**. The app shows "Waiting for your AI to connect". Your assistant cannot
+connect until you do this, once per session, and the steps for each client appear right there in the app.
+
 **Claude (web or desktop):** add a custom connector in Settings and paste the server URL:
 
 ```
@@ -30,8 +35,21 @@ servers.
 **Approve access:** your browser opens a Shiny Gen consent page. Sign in and approve. Authorization uses
 OAuth, and you can disconnect at any time.
 
-**Open your project:** keep [shinygen.ai](https://shinygen.ai) open in a tab — the assistant operates
-your live session, so the app must be running.
+**Keep Shiny Gen open:** the assistant operates your live session, so the app must stay open while it
+works. Hosting stays open as long as the app is.
+
+## If the connection fails
+
+- **The assistant says Shiny Gen is not hosting an external agent:** press **Host External Agent** in the
+  app (the first step above), then connect again. If Shiny Gen was closed or lost its connection, hosting
+  stopped with it: press the button again.
+- **No sign-in window appeared, and the client says the connection failed:** your browser is almost
+  certainly blocking the pop-up. Allow pop-ups for your AI client's site and connect again.
+- **Check the URL includes the path:** the server address is `https://mcp.shinygen.ai/mcp`. The host on
+  its own is not the endpoint.
+- **The assistant says agent access is switched off:** "Allow AI agents to connect" is off for your
+  account. The consent page offers to turn it back on, or turn it on in the app under **Agent access &
+  spending**.
 
 ## Permissions
 
@@ -62,7 +80,7 @@ limits apply to an assistant working in your project:
   and remaining.
 - **A weekly action allowance on the free tier.** Your first connection starts a **30-day
   full-connector trial**. After that, free accounts get an allowance of assistant actions that change
-  something (writing code, generating, running the game) per week — currently about 1,000, reset
+  something (writing code, generating, running the game) per week, currently about 10,000, reset
   weekly. **Reading is never limited**, and **paid members are not subject to this allowance** at all.
   The connector reports your current status and when the allowance resets.
 
@@ -73,8 +91,10 @@ the same abilities described on this page — it reads your project, writes game
 and play-tests what it builds. Connect Claude or ChatGPT when you would rather drive from a tool you
 already use; otherwise the in-app agent is right there.
 
-Both work the same way where it counts: code editing is free, generation spends gems, and the daily
-gem cap and the free-tier weekly allowance apply to both.
+Both work the same way where it counts: generation spends gems, and the daily gem cap and the free-tier
+weekly allowance apply to both. The difference is who runs the model. An outside assistant runs on your
+own AI plan, so its code editing costs no gems. The built-in agent's model runs on Shiny Gen, so each of
+its chat steps spends gems; the model picker shows what each model costs.
 
 ## The docs travel with the connector
 
