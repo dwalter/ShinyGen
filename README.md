@@ -2,12 +2,14 @@
 
 <img src="shiny_gen_ai_with_background.png" alt="Shiny Gen AI" width="720">
 
-### Make Godot games with AI, in your browser
+### Make games with AI on all devices
 
 Describe a game, play it, share it. Shiny Gen makes **real games on the Godot engine**, right in your
 browser. The AI writes the code and creates the art, so there's no engine to learn and nothing to install.
 
 [**▶ Play now**](https://shinygen.ai/play) · [Docs](docs/) · [FAQ](docs/faq.md) · [npm](https://www.npmjs.com/package/shinygen) · [MCP](docs/mcp.md)
+
+Available on the [App Store](https://apps.apple.com/app/id6738890511) and [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai)
 
 `AI Creation` · `WebGPU Native` · `Plays in Your Browser`
 
@@ -179,7 +181,7 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 | **Product** | Shiny Gen: AI game maker |
 | **Engine** | Godot (customized fork with a WebGPU renderer, compiled to WebAssembly) |
 | **Game code** | GDScript (runs in a sandboxed subset for security) |
-| **Runs on** | Any modern web browser; Android app on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai); iOS app coming soon |
+| **Runs on** | Any modern web browser; iPhone and iPad app on the [App Store](https://apps.apple.com/app/id6738890511); Android app on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai) |
 | **Pricing** | Free to use; gem credits for AI generation only. No subscription required |
 | **Built-in editors** | Game code (GDScript) · 3D models · Images · Audio & music |
 | **AI generation** | Game code, images, sprite animations, 3D models, sound effects, and music, using leading models including Claude and Gemini |
@@ -206,7 +208,7 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 
 - **Not a hosted prototype box** — your game is a real Godot project you own, not a clip locked to one page.
 - **Not just a 3D renderer** like Three.js — it's a whole game engine, so you don't hand-code physics, scenes, or tooling.
-- **Not a desktop download**: it runs in the browser, and as an Android app on Google Play, with an iOS app coming soon.
+- **Not a desktop download**: it runs in the browser, and as an app on the App Store and Google Play.
 - **Not a Godot plugin** — it's a standalone product built on Godot; you never install Godot.
 - **Not related to [Shiny](https://shiny.posit.co/)**, the R/Python web framework by Posit.
 - **Not related to** Pokémon shiny hunting.
