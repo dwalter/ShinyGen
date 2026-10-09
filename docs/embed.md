@@ -11,7 +11,9 @@ device: a desktop gets WebGPU when it supports it, and phones, tablets and brows
 
 In the Shiny Gen web app, open the **Share** menu on a game you own and choose **Export for the web**. You
 get a zip with the page, your game, and a README, pinned to an exact engine version so the page keeps
-working the same way. Upload the zip to itch.io, or put the files on any web host. Opening the page
+working the same way after we update. The page makes no calls to Shiny Gen, and once a player has
+loaded it, it also plays offline. Exporting needs any one purchase, from a $2.99 starter pack. Upload
+the zip to itch.io, or put the files on any web host. Opening the page
 straight from your disk does not work, because the browser will not let it load the game file; the
 README explains how to test it on your own computer.
 

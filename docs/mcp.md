@@ -80,8 +80,9 @@ limits apply to an assistant working in your project:
   and remaining.
 - **A weekly action allowance on the free tier.** Your first connection starts a **30-day
   full-connector trial**. After that, free accounts get an allowance of assistant actions that change
-  something (writing code, generating, running the game) per week, currently about 10,000, reset
-  weekly. **Reading is never limited**, and **paid members are not subject to this allowance** at all.
+  something (writing code, generating, running the game) per week, currently 300, reset every
+  Monday (UTC). **Reading is never limited**, and **anyone who has made a purchase is not subject to
+  this allowance** at all.
   The connector reports your current status and when the allowance resets.
 
 ## The AI agent built into the app

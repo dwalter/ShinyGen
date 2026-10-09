@@ -4,8 +4,10 @@
 
 ### Make games with AI on all devices
 
-Describe a game, play it, share it. Shiny Gen makes **real games on the Godot engine**, right in your
-browser. The AI writes the code and creates the art, so there's no engine to learn and nothing to install.
+Describe a game, play it, share it. Shiny Gen makes **real games on the Godot engine**, or on one of
+**five retro engines we built (GBA, GBC, N64, GameCube, DS)** that compile to a real ROM, .dol or .nds,
+in your browser, on iPhone and iPad, and on Android. The AI writes the code, creates the art, and plays
+the game to find and fix its own bugs, so there's no engine to learn and nothing to install.
 
 [**▶ Play now**](https://shinygen.ai/play) · [Docs](docs/) · [FAQ](docs/faq.md) · [npm](https://www.npmjs.com/package/shinygen) · [MCP](docs/mcp.md)
 
@@ -76,15 +78,29 @@ See [Embed games on your website](docs/embed.md).
 
 ## How it works
 
-1. **Describe a game.** Type what you want in plain language: a genre, a scene, a mechanic, or a whole idea.
-2. **The AI writes real game code.** Shiny Gen generates GDScript (the Godot engine's scripting language) and runs it immediately on the engine in your browser.
-3. **Play it instantly.** The game runs as it is built. There is nothing to install and no engine to learn.
-4. **Edit anything with the built-in editors.** Four AI creation surfaces: a game-code editor (GDScript), a 3D model editor, an image editor, and audio generation for sound effects and music.
-5. **Share it.** Every game can be shared with a link, exported for the web as a zip you can host anywhere, or embedded on any website with the `shinygen` npm package.
+1. **Pick an engine.** Godot, or one of the five retro engines: GBA, GBC, N64, GameCube, or DS.
+2. **Describe a game.** Type what you want in plain language: a genre, a scene, a mechanic, or a whole idea.
+3. **The AI writes real game code.** For a Godot game, Shiny Gen generates GDScript (the Godot engine's scripting language) and runs it immediately; a retro game compiles to a real file for its engine.
+4. **The AI tests what it built.** The agent runs the game, takes screenshots, presses the controls, and reads the game's errors, then fixes what is broken.
+5. **Play it instantly.** The game runs as it is built. There is nothing to install and no engine to learn.
+6. **Edit anything with the built-in editors.** Four AI creation surfaces: a game-code editor (GDScript), a 3D model editor, an image editor, and audio generation for sound effects and music.
+7. **Share it.** Every game can be shared with a link, exported for the web as a zip you can host anywhere, or embedded on any website with the `shinygen` npm package. A retro game downloads as the ROM, .dol, or .nds you own. Exporting files needs any one purchase, from a $2.99 starter pack.
 
 Full walkthrough: [Getting started](docs/getting-started.md).
 
 ## What makes it different
+
+**Six engines, one prompt.** Make a Godot game, or a real GBA, GBC, N64, GameCube, or DS game and
+download the file you own. The retro engines compile new games you make in Shiny Gen; they are not
+emulators and cannot play commercial or third-party ROMs.
+
+**The AI plays the game it makes.** It runs the game, takes screenshots, presses the controls, and
+reads the errors, then fixes what is broken. The built-in agent and a connected Claude or ChatGPT use
+the same tools.
+
+**Trade and battle across consoles.** Multiplayer games are joined with a link or a room code, and the
+Shiny Monsters games on Game Boy Color, Game Boy Advance, and DS trade and battle with each other over
+the internet.
 
 **It's browser-native *and* a real game engine.** Most AI game tools are one or the other.
 Prompt-to-game websites are instant but keep your game inside their own runtime. Engine-based AI tools
@@ -102,7 +118,8 @@ Other game-engine MCP integrations bridge to a desktop editor on your machine; S
 with nothing to install.
 
 **Games live on the web.** A Shiny Gen game is a link anyone can open. Its owner can also export it for the web
-as a zip to upload to itch.io or any web host, with its engine version pinned so it keeps working the same way.
+as a zip to upload to itch.io or any web host. An exported game makes no calls to Shiny Gen, its engine
+version is pinned so our updates cannot break it, and once loaded it also plays offline.
 
 ## Examples
 
@@ -153,8 +170,8 @@ configures connectors. Authorization uses OAuth with three scoped permissions:
 
 A connected assistant runs on your own AI plan, so its code edits cost no gems; only the generation it
 runs spends gems. On the free tier, your first connection starts a 30-day full-connector trial, after
-which a weekly allowance limits how many actions an assistant can take. Reading is never limited, and
-paid members are not subject to it.
+which a weekly allowance (currently 300) limits how many actions an assistant can take. Reading is
+never limited, and anyone who has made a purchase is not subject to it.
 
 **Prefer not to wire up a connector?** Shiny Gen has its own AI agent built into the app, with the same
 abilities: reading your project, writing game code, generating assets, and play-testing what it builds.
@@ -164,13 +181,14 @@ See [Connect Claude or ChatGPT](docs/mcp.md).
 
 ## Gems and pricing
 
-Shiny Gen is **free to use**, and no subscription is required. Playing and sharing games costs nothing,
-and so does building by hand; AI generation and the built-in AI agent spend gem credits.
+Shiny Gen is **free to make, play, and share**, and no subscription is required. AI generation and the
+built-in AI agent spend gem credits, and any one purchase also unlocks exporting your games as files.
 
-- **Free:** building and editing games by hand (including editing their code yourself), playing, sharing links, exporting games you own for the web, importing your own images.
+- **Free:** building and editing games by hand (including editing their code yourself), playing, sharing links, remixing, multiplayer, importing your own images, and code written by an AI assistant you connect over MCP.
+- **One purchase unlocks:** exporting your games as files (a web zip, a ROM, a .dol, or a .nds), for good.
 - **Uses gems:** AI generation (images, sprite animations, 3D models, sound effects, and music) and the built-in AI agent's chat steps. Each generation shows its cost before you run it.
 - **Free gems:** new accounts start with them.
-- **Buying:** one-time gem packs that never expire, or an optional membership that adds monthly gems.
+- **Buying:** a $2.99 starter pack (150 gems), one-time gem packs that never expire, or an optional membership that adds monthly gems.
 
 See [Gems and pricing](docs/gems-and-pricing.md).
 
@@ -179,13 +197,15 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 | | |
 |---|---|
 | **Product** | Shiny Gen: AI game maker |
-| **Engine** | Godot (customized fork with a WebGPU renderer, compiled to WebAssembly) |
-| **Game code** | GDScript (runs in a sandboxed subset for security) |
-| **Runs on** | Any modern web browser; iPhone and iPad app on the [App Store](https://apps.apple.com/app/id6738890511); Android app on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai) |
-| **Pricing** | Free to use; gem credits for AI generation only. No subscription required |
+| **Engines** | Six, chosen per game: Godot (customized fork with a WebGPU renderer, compiled to WebAssembly); GBA, GBC, N64 (a ROM); GameCube (a .dol); DS (a .nds) |
+| **Game code** | GDScript for Godot games (runs in a sandboxed subset for security) |
+| **AI testing** | The agent runs the game, takes screenshots, presses the controls, and reads runtime errors |
+| **Runs on** | Any modern web browser; iPhone and iPad app on the [App Store](https://apps.apple.com/app/id6738890511); Android app on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai), including Retroid-class handhelds; 17 languages |
+| **Pricing** | Free to make, play, and share; gems for AI generation; any one purchase (from $2.99) unlocks file export. No subscription required |
 | **Built-in editors** | Game code (GDScript) · 3D models · Images · Audio & music |
 | **AI generation** | Game code, images, sprite animations, 3D models, sound effects, and music, using leading models including Claude and Gemini |
-| **Sharing & export** | Share links · Export for the web (zip) · `shinygen` npm embed |
+| **Sharing & export** | Share links · Export for the web (zip) · `shinygen` npm embed · ROM, .dol, or .nds download |
+| **Multiplayer** | Link or room code; Shiny Monsters trade and battle across GBC, GBA, and DS |
 | **MCP** | Hosted server at `mcp.shinygen.ai`; works with Claude, ChatGPT, and any MCP client |
 | **Company** | Shiny AI Technologies, LLC (Massachusetts, USA), founded 2024 |
 | **Contact** | hello@shinygen.ai |
