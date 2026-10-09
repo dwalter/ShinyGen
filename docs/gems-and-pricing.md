@@ -1,6 +1,6 @@
 # Gems and pricing
 
-> Canonical version: **<https://shinygen.ai/docs/credits>**
+> Canonical version: **<https://shinygen.ai/docs/credits>** · Prices: **<https://shinygen.ai/pricing>**
 
 Shiny Gen is free to use, and no subscription is required. Playing and sharing games costs nothing, and
 so does building by hand; AI generation and the built-in AI agent spend gem credits. You can buy gem
@@ -32,12 +32,27 @@ New accounts start with free gems.
 
 ## Buying gems
 
-- **Starter pack**: 150 gems for $2.99, a one-time purchase that never expires.
-- **Gem packs**: one-time purchases that never expire.
-- **Membership (optional)**: adds a monthly allocation of gems. You never need a membership to keep
-  building, playing, or sharing.
+| One-time | Gems | Price |
+|---|---|---|
+| Starter pack | 150 | $2.99 |
+| Gem pack | 600 | $15 |
+| Gem pack | 1,300 | $30 |
+| Gem pack | 2,800 | $60 |
 
-Current prices are shown in the app.
+Gems from one-time purchases never expire.
+
+| Membership (optional) | Gems a month | Monthly |
+|---|---|---|
+| Plus | 750 | $15 |
+| Pro | 2,500 | $40 |
+| Max | 8,500 | $120 |
+
+Memberships cost 20% less when billed yearly, and you can cancel any time (see the
+[Payment Terms](https://shinygen.ai/payment-terms)). You never need a membership to keep building,
+playing, or sharing.
+
+Prices are in US dollars on the web. In the iPhone, iPad, and Android apps, prices come from the App
+Store or Google Play and can differ by country. See also <https://shinygen.ai/pricing>.
 
 ## AI assistants
 
@@ -51,10 +66,10 @@ for the details.
 
 ## Ownership and commercial use
 
-You own the games and assets you create with Shiny Gen, and you can use them commercially. You grant
-Shiny Gen a license to host and display your content so sharing and publishing features work. See the
-[Terms of Service](https://shinygen.ai/terms-of-service) for the exact terms.
+You own the games and assets you create with Shiny Gen, and you can use them commercially, including
+selling them; Shiny Gen takes no revenue share. You grant Shiny Gen a license to use your content to run
+and improve the service; see the [Terms of Service](https://shinygen.ai/terms-of-service), section 4.
 
-*Last updated: October 8, 2026*
+*Last updated: October 9, 2026*
 
 [← Docs](README.md)

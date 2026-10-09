@@ -75,9 +75,13 @@ Multiplayer works inside Shiny Gen; a game exported for the web plays solo for n
 
 ## Can I sell games I make with Shiny Gen? Who owns them?
 
-You own the games and assets you create with Shiny Gen, and you can use them commercially. You grant
-Shiny Gen a license to host and display your content so sharing and publishing features work. See the
-[Terms of Service](https://shinygen.ai/terms-of-service) for the exact terms.
+Yes. You own the games and assets you create with Shiny Gen, including AI-generated art, models, audio,
+and code, and the Terms of Service allow personal and commercial use. To sell a game, export it for the
+web as a zip and publish it on itch.io or any store or site that sells web games, or download a retro
+game's ROM, .dol, or .nds file. Exporting needs any one purchase, from a $2.99 starter pack, and Shiny
+Gen takes no revenue share. As with any game, you need the rights to whatever you put in it. You grant
+Shiny Gen a license to use your content to run and improve the service; see the
+[Terms of Service](https://shinygen.ai/terms-of-service), section 4.
 
 ## Who owns the assets I generate with AI?
 
@@ -99,11 +103,14 @@ Not as a project file. Your game's code is real GDScript you can read, edit, and
 Shiny Gen's sandboxed Godot fork, which the stock Godot editor cannot open. To take a game elsewhere,
 export it for the web, or download the ROM, .dol, or .nds of a retro-engine game.
 
-## What happens to my games if I stop using Shiny Gen?
+## What happens to my games if I stop using Shiny Gen, or if it shuts down?
 
-A game you export for the web is a zip you host yourself: it makes no calls to Shiny Gen, and its engine
-version is pinned on a public CDN, so it keeps working. A retro game's ROM, .dol, or .nds is a file you
-keep. You own your games under the Terms of Service.
+Exported games keep working without Shiny Gen. A game exported for the web is a zip you host yourself:
+it makes no calls to Shiny Gen, its engine is pinned to an exact version of the public `shinygen`
+package on a public CDN, and once loaded it plays offline. A retro game's ROM, .dol, or .nds is a file
+you keep and can play without Shiny Gen. Games you have not exported live in your Shiny Gen account, so
+export the ones you want a copy of. You own your games under the Terms of Service, and you can
+[delete your account and its data](https://shinygen.ai/delete-data) at any time.
 
 ## What is the Shiny Gen MCP server?
 
@@ -142,6 +149,9 @@ input, audio, and editors included, and AI that writes the GDScript. If you want
 a renderer, Three.js is great; if you want a complete game without building an engine, that is Shiny
 Gen.
 
+For a fuller comparison with other kinds of AI game maker, including when another tool is the better
+pick, see [Shiny Gen vs other AI game makers](compare.md).
+
 ## Can I import my own images into Shiny Gen?
 
 Yes. You can import images from your device with a file picker or drag-and-drop, and use them alongside
@@ -172,6 +182,6 @@ Godot editor. You do not need Godot installed; everything runs in your browser a
 Still curious? Read [What is Shiny Gen?](what-is-shiny-gen.md) or just [start
 playing](https://shinygen.ai/play).
 
-*Last updated: October 8, 2026*
+*Last updated: October 9, 2026*
 
 [← Docs](README.md)

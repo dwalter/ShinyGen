@@ -9,7 +9,7 @@ Describe a game, play it, share it. Shiny Gen makes **real games on the Godot en
 in your browser, on iPhone and iPad, and on Android. The AI writes the code, creates the art, and plays
 the game to find and fix its own bugs, so there's no engine to learn and nothing to install.
 
-[**▶ Play now**](https://shinygen.ai/play) · [Docs](docs/) · [FAQ](docs/faq.md) · [npm](https://www.npmjs.com/package/shinygen) · [MCP](docs/mcp.md)
+[**▶ Play now**](https://shinygen.ai/play) · [Docs](docs/) · [FAQ](docs/faq.md) · [Pricing](https://shinygen.ai/pricing) · [Compare](docs/compare.md) · [npm](https://www.npmjs.com/package/shinygen) · [MCP](docs/mcp.md)
 
 Available on the [App Store](https://apps.apple.com/app/id6738890511) and [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai)
 
@@ -188,9 +188,9 @@ built-in AI agent spend gem credits, and any one purchase also unlocks exporting
 - **One purchase unlocks:** exporting your games as files (a web zip, a ROM, a .dol, or a .nds), for good.
 - **Uses gems:** AI generation (images, sprite animations, 3D models, sound effects, and music) and the built-in AI agent's chat steps. Each generation shows its cost before you run it.
 - **Free gems:** new accounts start with them.
-- **Buying:** a $2.99 starter pack (150 gems), one-time gem packs that never expire, or an optional membership that adds monthly gems.
+- **Buying:** a $2.99 starter pack (150 gems); one-time gem packs of 600, 1,300, or 2,800 gems for $15, $30, or $60 that never expire; or an optional membership (Plus $15, Pro $40, Max $120 a month, 20% less yearly) that adds monthly gems.
 
-See [Gems and pricing](docs/gems-and-pricing.md).
+See [Gems and pricing](docs/gems-and-pricing.md) and [shinygen.ai/pricing](https://shinygen.ai/pricing).
 
 ## Specifications
 
@@ -218,7 +218,8 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 | [Getting started](docs/getting-started.md) | From nothing to a shared game |
 | [FAQ](docs/faq.md) | Pricing, Godot, platforms, ownership, export, MCP |
 | [Connect Claude or ChatGPT](docs/mcp.md) | The hosted MCP server, scopes, and what an assistant can do |
-| [Gems and pricing](docs/gems-and-pricing.md) | What's free, what uses gems, how buying works |
+| [Gems and pricing](docs/gems-and-pricing.md) | What's free, what uses gems, prices |
+| [Shiny Gen vs other AI game makers](docs/compare.md) | The kinds of AI game maker, side by side, and when another tool is the better pick |
 | [Embed games on your website](docs/embed.md) | The `shinygen` npm package |
 | [Examples](docs/examples.md) | All 99 playable examples |
 | [GDScript API reference](docs/gdscript-api-reference.md) | The exact supported API surface for game code |
@@ -242,7 +243,8 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 [EULA](https://shinygen.ai/eula) ·
 [Support](https://shinygen.ai/support)
 
-You own the games and assets you create with Shiny Gen, and you can use them commercially.
+You own the games and assets you create with Shiny Gen, and you can use them commercially, including
+selling them; Shiny Gen takes no revenue share. Exported games keep working if you stop using Shiny Gen.
 
 The documentation in this repository is licensed [CC BY 4.0](LICENSE). The Shiny Gen Engine itself
 (the `shinygen` npm package) is proprietary and governed by [its own license](LICENSE-ENGINE.txt) —
