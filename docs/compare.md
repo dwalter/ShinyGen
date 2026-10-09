@@ -70,7 +70,8 @@ Other tools vary and change often, so their columns describe the kind of tool, n
 - Native desktop or mobile builds of a game you made.
 - Multiplayer in a game exported for the web (it plays solo; multiplayer works inside Shiny Gen).
 - Web export from the iPhone, iPad, or Android app (it is in the web app; retro ROM, .dol, and .nds
-  downloads work in the apps too).
+  downloads also work in the iPhone and iPad app).
+- Saving a retro ROM, .dol, or .nds file from the Android app: download it from a browser for now.
 - A connected AI assistant with Shiny Gen closed: it works while the app is open and hosting it.
 
 Comparisons describe kinds of tool as of the date below; individual products change often, so check
