@@ -105,7 +105,7 @@ the internet.
 **It's browser-native *and* a real game engine.** Most AI game tools are one or the other.
 Prompt-to-game websites are instant but keep your game inside their own runtime. Engine-based AI tools
 produce a real project but run as desktop software. Shiny Gen is both at once: it runs entirely in the
-browser, and what it builds is a real Godot project written in GDScript that you own.
+browser, and what it builds is a game you own, written in real GDScript on the Godot engine.
 
 **It's a whole game engine, not just a renderer.** Web games built with Three.js get a 3D renderer, and
 everything else is hand-written: physics, input, scenes, cameras, tooling. Shiny Gen puts the Godot
@@ -226,7 +226,7 @@ See [Gems and pricing](docs/gems-and-pricing.md).
 
 ## What Shiny Gen is not
 
-- **Not a hosted prototype box** — your game is a real Godot project you own, not a clip locked to one page.
+- **Not a hosted prototype box** — your game is a real game you own, not a clip locked to one page.
 - **Not just a 3D renderer** like Three.js — it's a whole game engine, so you don't hand-code physics, scenes, or tooling.
 - **Not a desktop download**: it runs in the browser, and as an app on the App Store and Google Play.
 - **Not a Godot plugin** — it's a standalone product built on Godot; you never install Godot.

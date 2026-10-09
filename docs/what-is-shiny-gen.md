@@ -63,7 +63,7 @@ both screens on dual-screen handhelds.
 Most AI game tools are one or the other. Prompt-to-game websites are instant but keep your game inside
 their own runtime. Engine-based AI tools produce a real project but run as desktop software. Shiny Gen
 is both at once: it runs in the browser with nothing to install (and as an app on the App Store and
-Google Play), and what it builds is a real Godot project written in GDScript that you own.
+Google Play), and what it builds is a game you own, written in real GDScript on the Godot engine.
 
 ### It is a whole game engine, not just a renderer
 
@@ -106,7 +106,7 @@ Service](https://shinygen.ai/terms-of-service)).
 | | |
 |---|---|
 | Product | Shiny Gen: AI game maker |
-| Engines | Six, chosen per game:<br>Godot (customized fork with a WebGPU renderer, compiled to WebAssembly): a real Godot project you own, exportable for the web as a zip<br>GBA, GBC, N64: a ROM you can download<br>GameCube: a .dol file you can download<br>DS: a .nds file you can download<br>Exporting any of these files needs one purchase (from $2.99). |
+| Engines | Six, chosen per game:<br>Godot (customized fork with a WebGPU renderer, compiled to WebAssembly): real GDScript you own, exportable for the web as a zip<br>GBA, GBC, N64: a ROM you can download<br>GameCube: a .dol file you can download<br>DS: a .nds file you can download<br>Exporting any of these files needs one purchase (from $2.99). |
 | Game code | GDScript for Godot games (runs in a sandboxed subset for security) |
 | Runs on | Any modern web browser; iPhone and iPad app on the [App Store](https://apps.apple.com/app/id6738890511); Android app on [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai), including Retroid-class handhelds; 17 languages |
 | Pricing | Free to make, play, and share; gems for AI generation (new accounts get free gems). No subscription required: a $2.99 starter pack, one-time gem packs that never expire, or an optional membership that adds monthly gems. Any one purchase also unlocks file export. |
