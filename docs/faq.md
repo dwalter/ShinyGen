@@ -71,7 +71,7 @@ the browser, on desktop or mobile.
 
 The web app is the desktop version. The full engine and editors run in your browser on Windows, Mac,
 Linux, and Chromebooks, with nothing to install, and the first load is about 17 MB. Phones and tablets get
-the iPhone, iPad, and Android apps. This is about Shiny Gen itself: a game you make is exported for the
+the iPhone, iPad, and Android apps. On a Mac with Apple silicon, the iPad app also installs from the Mac App Store. This is about Shiny Gen itself: a game you make is exported for the
 web as a zip or as a retro ROM, .dol, or .nds file (exporting needs any one purchase, from $2.99), not as
 a native desktop or mobile app.
 

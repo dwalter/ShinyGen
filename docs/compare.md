@@ -56,7 +56,7 @@ Other tools vary and change often, so their columns describe the kind of tool, n
   runs Shiny Gen in its own browser while your app stays closed ([how](https://shinygen.ai/docs/mcp#agent-session)).
 - **No desktop install.** The web app is the desktop version: the full engine and editors in your
   browser on Windows, Mac, Linux, and Chromebooks, and the first load is about 17 MB. Phones and tablets
-  get the iPhone, iPad, and Android apps. (A game you make is exported for the web or as a retro file,
+  get the iPhone, iPad, and Android apps. On a Mac with Apple silicon, the iPad app also installs from the Mac App Store. (A game you make is exported for the web or as a retro file,
   not as a native app; exporting needs any one purchase, from $2.99.)
 - **You own your games** and may use them commercially
   ([Terms of Service](https://shinygen.ai/terms-of-service), section 4).
