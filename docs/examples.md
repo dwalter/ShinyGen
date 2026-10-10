@@ -111,7 +111,7 @@ project running on the Godot engine in your browser.
 
 ---
 
-Want to make your own? [▶ Play Shiny Gen](https://shinygen.ai/play) — or read
+Want to make your own? [▶ Play Shiny Gen](https://shinygen.ai/play), or read
 [Getting started](getting-started.md).
 
 [← Docs](README.md)

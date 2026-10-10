@@ -2,7 +2,7 @@
 
 > This is the same reference Shiny Gen serves to connected AI assistants over its
 > [MCP server](mcp.md), published here for people too. It describes the GDScript
-> surface available to **game code** in Shiny Gen — see [Getting started](getting-started.md)
+> surface available to **game code** in Shiny Gen; see [Getting started](getting-started.md)
 > for how to write and run it, and [Embed games on your website](embed.md) for running
 > it on your own page. A copy of this file may lag the app; the connector always serves
 > the current one.

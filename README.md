@@ -20,7 +20,7 @@ Available on the [App Store](https://apps.apple.com/app/id6738890511) and [Googl
 ---
 
 This repository is the **public documentation** for Shiny Gen. The canonical, always-current version
-of every page lives at [shinygen.ai](https://shinygen.ai) — each doc here links to its source.
+of every page lives at [shinygen.ai](https://shinygen.ai), and each doc here links to its source.
 
 ## Start in 60 seconds
 
@@ -73,7 +73,7 @@ func _process(delta):
 </script>
 ```
 
-That's a red cube spinning under a directional light — a complete, running Shiny Gen scene.
+That's a red cube spinning under a directional light: a complete, running Shiny Gen scene.
 See [Embed games on your website](docs/embed.md).
 
 ## How it works
@@ -110,7 +110,7 @@ browser, and what it builds is a game you own, written in real GDScript on the G
 
 **It's a whole game engine, not just a renderer.** Web games built with Three.js get a 3D renderer, and
 everything else is hand-written: physics, input, scenes, cameras, tooling. Shiny Gen puts the Godot
-engine itself in the browser — physics, scenes, input, audio, and editors included — running on a WebGPU
+engine itself in the browser (physics, scenes, input, audio, and editors included), running on a WebGPU
 renderer compiled to WebAssembly.
 
 **Its MCP server is hosted, not a desktop bridge.** Press Host External Agent in the app, connect Claude,
@@ -136,7 +136,7 @@ Click any example to play it, then remix it with AI.
 
 ## Embed games on your website
 
-A Shiny Gen game runs natively on any web page — your portfolio, blog, or game site. It is **not an
+A Shiny Gen game runs natively on any web page: your portfolio, blog, or game site. It is **not an
 iframe**: the engine boots on your canvas. By default it picks the engine per device: a desktop gets
 WebGPU when it supports it, and phones, tablets and browsers without WebGPU get WebGL.
 
@@ -228,10 +228,10 @@ See [Gems and pricing](docs/gems-and-pricing.md) and [shinygen.ai/pricing](https
 
 ## What Shiny Gen is not
 
-- **Not a hosted prototype box** — your game is a real game you own, not a clip locked to one page.
-- **Not just a 3D renderer** like Three.js — it's a whole game engine, so you don't hand-code physics, scenes, or tooling.
+- **Not a hosted prototype box:** your game is a real game you own, not a clip locked to one page.
+- **Not just a 3D renderer** like Three.js: it's a whole game engine, so you don't hand-code physics, scenes, or tooling.
 - **Not a desktop download**: it runs in the browser, and as an app on the App Store and Google Play.
-- **Not a Godot plugin** — it's a standalone product built on Godot; you never install Godot.
+- **Not a Godot plugin:** it's a standalone product built on Godot; you never install Godot.
 - **Not related to [Shiny](https://shiny.posit.co/)**, the R/Python web framework by Posit.
 - **Not related to** Pokémon shiny hunting.
 
@@ -248,7 +248,7 @@ You own the games and assets you create with Shiny Gen, and you can use them com
 selling them; Shiny Gen takes no revenue share. Exported games keep working if you stop using Shiny Gen.
 
 The documentation in this repository is licensed [CC BY 4.0](LICENSE). The Shiny Gen Engine itself
-(the `shinygen` npm package) is proprietary and governed by [its own license](LICENSE-ENGINE.txt) —
+(the `shinygen` npm package) is proprietary and governed by [its own license](LICENSE-ENGINE.txt):
 free to use, including commercially, to make games.
 
 ---

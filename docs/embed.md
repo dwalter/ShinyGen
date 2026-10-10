@@ -102,7 +102,7 @@ After boot, `ShinyGen.renderer` reports which engine is running (`"webgpu"` or `
 
 ## License
 
-The Shiny Gen Engine is proprietary, closed source. **Free to use — including commercially — to make
+The Shiny Gen Engine is proprietary, closed source. **Free to use, including commercially, to make
 games**, provided you keep the "Made with Shiny Gen" notice visible (it shows at boot by default). You
 may **not** use it to build a competing game maker, engine, asset editor/generator, or game catalog, or
 to train an AI model, without a separate enterprise license (contact dwalter@shinygen.ai). The full

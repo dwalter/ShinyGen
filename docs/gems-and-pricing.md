@@ -60,7 +60,7 @@ An outside assistant you [connect over MCP](mcp.md) runs on your own AI plan, so
 gems; only the AI generation it runs spends your gems. Shiny Gen's built-in AI agent runs its model on
 Shiny Gen, so each of its chat steps spends gems as well. For both, a daily gem cap limits how much an
 assistant can spend in one day, and on the free tier a weekly allowance limits how many actions it can
-take — after a 30-day trial that starts at your first connection. Reading is never limited, and anyone
+take, after a 30-day trial that starts at your first connection. Reading is never limited, and anyone
 who has made a purchase is not subject to the weekly allowance. See [Connect Claude or ChatGPT](mcp.md)
 for the details.
 

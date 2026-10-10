@@ -7,15 +7,15 @@
 We aim to respond to all inquiries within 24 hours during business days.
 
 - **Email:** support@shinygen.ai
-- **Business hours:** Monday–Friday, 9 AM – 5 PM EST
+- **Business hours:** Monday to Friday, 9 AM to 5 PM EST
 
 ## Technical requirements
 
 - **A desktop browser: Chrome, Edge, or Firefox.** These give the full experience and are what we recommend.
-- **Safari works, but can run slower.** Safari does not support all the browser features Shiny Gen uses — it never gets the cross-origin isolation our pages ask for — so it can fall back to a slower rendering path. Everything is available; heavy scenes just take longer. If Shiny Gen feels slow in Safari, try Chrome, Edge, or Firefox before reporting a bug.
+- **Safari works, but can run slower.** Safari does not support all the browser features Shiny Gen uses (it never gets the cross-origin isolation our pages ask for), so it can fall back to a slower rendering path. Everything is available; heavy scenes just take longer. If Shiny Gen feels slow in Safari, try Chrome, Edge, or Firefox before reporting a bug.
 - **Mobile web is not optimized yet.** Shiny Gen loads on phones and tablets, but the experience is rough and some devices cannot hold the 3D renderer. Desktop is the supported way to use it on the web today. On a phone or tablet, use the app: it is available on the [App Store](https://apps.apple.com/app/id6738890511) and [Google Play](https://play.google.com/store/apps/details?id=com.shinygen.ai).
 - A stable internet connection
-- WebGPU or WebGL2 — Shiny Gen renders with WebGPU where it is available and falls back to WebGL2 automatically, so any modern browser can run it
+- WebGPU or WebGL2: Shiny Gen renders with WebGPU where it is available and falls back to WebGL2 automatically, so any modern browser can run it
 - Minimum 4 GB RAM recommended
 
 ## How do I report a bug?

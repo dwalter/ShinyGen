@@ -63,7 +63,7 @@ works. Hosting stays open as long as the app is.
 
 - Read what is on screen and which document is focused.
 - Write or patch the game's GDScript; the game compiles, runs, and reports errors back with line numbers.
-- Start a **new game** for you, list the games in your account, and open any one of them — so you can say "go back to the platformer" and it will.
+- Start a **new game** for you, list the games in your account, and open any one of them, so you can say "go back to the platformer" and it will.
 - Take screenshots to see what you see, including frame bursts to check motion.
 - Press keys and actions on the running game to play-test what it built, including whole input timelines when a game needs two controls at once.
 - Generate images, 3D models, and audio with Shiny Gen's generation models, browse and restore earlier versions of an asset, and remove an image's background.
@@ -72,7 +72,7 @@ works. Hosting stays open as long as the app is.
 
 ## What it costs, and the limits
 
-Connecting is free, and **writing code is always free** — only AI generation spends gems. Two separate
+Connecting is free, and **writing code is always free**; only AI generation spends gems. Two separate
 limits apply to an assistant working in your project:
 
 - **A daily gem cap.** Caps how many gems a connected assistant can spend in a single day, so an
@@ -88,7 +88,7 @@ limits apply to an assistant working in your project:
 ## The AI agent built into the app
 
 You do not need an outside assistant at all: Shiny Gen has its own AI agent built into the app, with
-the same abilities described on this page — it reads your project, writes game code, generates assets,
+the same abilities described on this page: it reads your project, writes game code, generates assets,
 and play-tests what it builds. Connect Claude or ChatGPT when you would rather drive from a tool you
 already use; otherwise the in-app agent is right there.
 
