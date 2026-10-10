@@ -46,6 +46,13 @@ Yes. Shiny Gen's agent plays the game it just built: it runs it, takes screensho
 controls, and reads the game's errors, then fixes what is broken. The built-in agent and a connected
 Claude or ChatGPT use the same tools.
 
+## Can I show the AI a photo?
+
+Yes, in the iPhone, iPad, and Android apps. Tap the photo button in the agent chat to attach a
+picture from your library or take one with the camera, and the AI uses it as a reference: a sketch
+of a level, a pet to turn into a character, or a screenshot of a style you like. Photos are not in
+the web app yet.
+
 ## Do Shiny Gen games use real GDScript?
 
 Yes. Games are written in GDScript, the Godot engine's scripting language, running in the browser.

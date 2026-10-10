@@ -14,8 +14,9 @@ There is nothing to install, and new accounts include free gems for AI generatio
 ## 2. Describe your game
 
 A new game starts with a choice of engine: Godot, or one of the retro engines GBA, GBC, N64, GameCube,
-and DS. Then type what you want in plain language: a genre, a scene, a mechanic, or a whole idea. The AI
-writes the game's code and the game runs immediately. You can watch it come together and play it as you
+and DS. Then type what you want in plain language: a genre, a scene, a mechanic, or a whole idea. In the
+iPhone, iPad, and Android apps you can also attach a photo from your library or camera as a reference.
+The AI writes the game's code and the game runs immediately. You can watch it come together and play it as you
 go.
 
 ## 3. Or remix an example

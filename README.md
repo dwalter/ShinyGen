@@ -80,6 +80,7 @@ See [Embed games on your website](docs/embed.md).
 
 1. **Pick an engine.** Godot, or one of the five retro engines: GBA, GBC, N64, GameCube, or DS.
 2. **Describe a game.** Type what you want in plain language: a genre, a scene, a mechanic, or a whole idea.
+   In the iPhone, iPad, and Android apps you can also attach a photo from your library or camera as a reference.
 3. **The AI writes real game code.** For a Godot game, Shiny Gen generates GDScript (the Godot engine's scripting language) and runs it immediately; a retro game compiles to a real file for its engine.
 4. **The AI tests what it built.** The agent runs the game, takes screenshots, presses the controls, and reads the game's errors, then fixes what is broken.
 5. **Play it instantly.** The game runs as it is built. There is nothing to install and no engine to learn.
