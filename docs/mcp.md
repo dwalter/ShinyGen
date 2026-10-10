@@ -3,14 +3,22 @@
 > Canonical version: **<https://shinygen.ai/docs/mcp>**
 
 Shiny Gen ships a hosted MCP server at `https://mcp.shinygen.ai/mcp`. Connect an AI assistant (Claude,
-ChatGPT, or any MCP client) and it can build, edit, and play-test your Shiny Gen project, live in your
-browser. There is nothing to install: unlike MCP integrations that bridge to a desktop engine running on
-your machine, Shiny Gen's server is remote and operates the project in your open browser tab.
+ChatGPT, or any MCP client) and it can build, edit, and play-test your Shiny Gen project. There is
+nothing to install: unlike MCP integrations that bridge to a desktop engine running on your machine,
+Shiny Gen's server is remote and operates the project in a Shiny Gen tab, either yours or the AI's own.
+
+There are two ways in, and only one needs your app open:
+
+- **Host from your open app** (below): press **Host External Agent**, connect your assistant, and watch
+  it work in your app. It works while that app stays open.
+- **Give your AI an agent session link** ([below](#let-your-ai-run-shiny-gen-itself-nothing-open-on-your-side)):
+  the AI opens the link in its own browser and runs Shiny Gen there, so nothing has to stay open on your
+  side. Your AI needs to be able to run a browser; code that starts a headless Chromium counts.
 
 > MCP (Model Context Protocol) is an open standard that lets AI assistants use external tools. Shiny Gen
 > exposes its editors and generation models as MCP tools.
 
-## Connect
+## Connect from your open app
 
 **Start hosting in Shiny Gen:** open your game at [shinygen.ai](https://shinygen.ai), open the **Agent**
 tab, tap the model name to open the AI model picker, choose **Connect external model with MCP**, and
@@ -35,14 +43,39 @@ servers.
 **Approve access:** your browser opens a Shiny Gen consent page. Sign in and approve. Authorization uses
 OAuth, and you can disconnect at any time.
 
-**Keep Shiny Gen open:** the assistant operates your live session, so the app must stay open while it
-works. Hosting stays open as long as the app is.
+**Keep Shiny Gen open for this way:** the assistant operates your live session, so the app must stay
+open while it works. Hosting stays open as long as the app is. To let your AI work with your app closed,
+use an agent session link instead (next section).
+
+## Let your AI run Shiny Gen itself (nothing open on your side)
+
+With an agent session link, the AI runs Shiny Gen in its own browser, and your app can be closed the
+whole time.
+
+1. Make the link. For a new game (or a remix), press **+** and then **Link** under **Bring your own
+   agent**. For a game you have open, open the model picker, choose **Connect external model with MCP**,
+   then **Create an agent session link**.
+2. Choose how long the session lasts: 1 hour or 24 hours.
+3. Press **Copy link** and paste it to your AI. The copy includes a short note that tells it how to open
+   the link. That is all you do: you can close Shiny Gen.
+
+The link looks like `https://shinygen.ai/agent_session#...`; the part after the `#` is a one-time code
+that browsers never send to a server. Your AI opens the whole link in a browser (a headless Chromium its
+own code starts is fine), gets a Shiny Gen editor on that game, and connects its MCP client to
+`https://mcp.shinygen.ai/mcp` with the token the page leaves, with no registration or consent step.
+Limits: the link works once, within an hour; your account has one live agent session at a time, so a
+newer link ends the older one; up to 10 unused links can wait at once; while a session runs, your own
+copy of that game opens read-only with an **End agent session** button; and you can see and revoke
+sessions under **Agent access and spending**. Gems work exactly as they do for any connected assistant.
+Full details, including resuming a session after the AI's browser closes:
+[shinygen.ai/docs/mcp](https://shinygen.ai/docs/mcp#agent-session).
 
 ## If the connection fails
 
 - **The assistant says Shiny Gen is not hosting an external agent:** press **Host External Agent** in the
   app (the first step above), then connect again. If Shiny Gen was closed or lost its connection, hosting
-  stopped with it: press the button again.
+  stopped with it: press the button again, or give your AI an agent session link so it does not depend
+  on your app.
 - **No sign-in window appeared, and the client says the connection failed:** your browser is almost
   certainly blocking the pop-up. Allow pop-ups for your AI client's site and connect again.
 - **Check the URL includes the path:** the server address is `https://mcp.shinygen.ai/mcp`. The host on

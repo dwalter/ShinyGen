@@ -67,6 +67,14 @@ Shiny Gen runs in any modern web browser; there is nothing to install. The app i
 Play](https://play.google.com/store/apps/details?id=com.shinygen.ai) (Android). Shared games also run in
 the browser, on desktop or mobile.
 
+## Is there a Shiny Gen desktop app?
+
+The web app is the desktop version. The full engine and editors run in your browser on Windows, Mac,
+Linux, and Chromebooks, with nothing to install, and the first load is about 17 MB. Phones and tablets get
+the iPhone, iPad, and Android apps. This is about Shiny Gen itself: a game you make is exported for the
+web as a zip or as a retro ROM, .dol, or .nds file (exporting needs any one purchase, from $2.99), not as
+a native desktop or mobile app.
+
 ## Is there an AI game maker that works on web, Android, and iOS?
 
 Yes. Shiny Gen lets you make, edit, and play games in any modern browser, in the iPhone and iPad app,
@@ -110,6 +118,13 @@ Not as a project file. Your game's code is real GDScript you can read, edit, and
 Shiny Gen's sandboxed Godot fork, which the stock Godot editor cannot open. To take a game elsewhere,
 export it for the web, or download the ROM, .dol, or .nds of a retro-engine game.
 
+## Can I download my game's source code?
+
+Not as a project download. Your game's code is real GDScript you can read and copy in the app, but
+it runs on Shiny Gen's own engine, a Godot 4.6.2 fork with a lot added, so a source export would not run
+in stock Godot. That is why exports are a web zip that runs anywhere, or a retro ROM, .dol, or .nds file.
+Exporting needs any one purchase, from a $2.99 starter pack.
+
 ## What happens to my games if I stop using Shiny Gen, or if it shuts down?
 
 Exported games keep working without Shiny Gen. A game exported for the web is a zip you host yourself:
@@ -128,12 +143,25 @@ project; there is nothing to install.
 
 ## How do I connect Claude or ChatGPT to Shiny Gen?
 
-First start hosting in Shiny Gen: open your game, open the **Agent** tab, tap the model name to open the
-AI model picker, choose **Connect external model with MCP**, and press **Host External Agent**. Your
-assistant cannot connect until you do. Then add Shiny Gen as a connector (MCP server) in your AI
-assistant using the URL `https://mcp.shinygen.ai/mcp`, and approve access with your Shiny Gen account.
-[Step-by-step setup](mcp.md). Authorization uses OAuth with scoped permissions: `projects.read`,
-`projects.write`, and `assets.generate`.
+There are two ways. **From your open app:** open your game, open the **Agent** tab, tap the model name
+to open the AI model picker, choose **Connect external model with MCP**, and press **Host External
+Agent**. Your assistant cannot connect this way until you do. Then add Shiny Gen as a connector (MCP
+server) in your AI assistant using the URL `https://mcp.shinygen.ai/mcp`, and approve access with your
+Shiny Gen account. Authorization uses OAuth with scoped permissions: `projects.read`, `projects.write`,
+and `assets.generate`. This way works while your app stays open. **With an agent session link:** if your
+AI can run a browser, give it a link instead, and it runs Shiny Gen in its own browser with nothing open
+on your side (see the next answer). [Step-by-step setup](mcp.md).
+
+## Does Shiny Gen have to stay open while my AI works?
+
+No, not if you use an agent session link. Hosting from your open app (**Host External Agent**) works
+while that app stays open. An agent session link does not need your app at all: on the **+** screen
+press **Link** under **Bring your own agent** (or, for a game you have open, **Create an agent session
+link** in the model picker's **Bring your own AI** page), choose 1 hour or 24 hours, and paste the copied
+link to your AI. It opens the link in its own browser, which can be a headless browser its code starts,
+and runs Shiny Gen there on that game. The link works once, within an hour; your account has one live
+agent session at a time; while it runs, your own copy of that game opens read-only; and you can revoke it
+any time under **Agent access and spending**.
 
 ## What can a connected AI assistant do in Shiny Gen?
 
@@ -189,6 +217,6 @@ Godot editor. You do not need Godot installed; everything runs in your browser a
 Still curious? Read [What is Shiny Gen?](what-is-shiny-gen.md) or just [start
 playing](https://shinygen.ai/play).
 
-*Last updated: October 9, 2026*
+*Last updated: October 10, 2026*
 
 [← Docs](README.md)

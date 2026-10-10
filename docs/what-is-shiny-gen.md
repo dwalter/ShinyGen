@@ -77,7 +77,9 @@ engine plumbing.
 
 Shiny Gen ships a remote MCP (Model Context Protocol) server at `mcp.shinygen.ai`. Press Host External
 Agent in the app, connect Claude, ChatGPT, or any MCP client, and the assistant can read your project,
-write code, generate assets, and run the game, live, in your browser project. Other game-engine MCP
+write code, generate assets, and run the game, live, in your browser project. Or give your AI an agent
+session link: it opens Shiny Gen in its own browser and works there, with nothing open on your side
+([how](mcp.md#let-your-ai-run-shiny-gen-itself-nothing-open-on-your-side)). Other game-engine MCP
 integrations are bridges to a desktop editor running on your machine; Shiny Gen's is hosted, with
 nothing to install, and access is controlled by scoped OAuth permissions.
 
@@ -94,7 +96,10 @@ Service](https://shinygen.ai/terms-of-service)).
 - Not a hosted prototype box: your game is a real project you own, not a clip locked to one page.
 - Not just a 3D renderer like Three.js: it is a whole game engine, so you do not hand-code physics,
   scenes, or tooling.
-- Not a desktop download: it runs in the browser, and as an app on the App Store and Google Play.
+- Not a desktop download: the web app is the desktop version, with the full engine and editors in your
+  browser on Windows, Mac, Linux, and Chromebooks (about 17 MB on first load), and it is an app on the App
+  Store and Google Play. A game you make is exported for the web or as a retro file (any one purchase,
+  from $2.99), not as a native app.
 - Not a Godot plugin: it is a standalone product built on Godot; you never install Godot.
 - Not an emulator and not a ROM loader: the GBA, GBC, N64, GameCube, and DS engines compile games you
   make in Shiny Gen, and cannot play commercial or third-party ROMs.
@@ -121,6 +126,6 @@ Service](https://shinygen.ai/terms-of-service)).
 
 More: [Frequently asked questions](faq.md) · [Getting started](getting-started.md) · [▶ Play Shiny Gen](https://shinygen.ai/play)
 
-*Last updated: October 8, 2026*
+*Last updated: October 10, 2026*
 
 [← Docs](README.md)

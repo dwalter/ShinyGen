@@ -115,6 +115,8 @@ renderer compiled to WebAssembly.
 
 **Its MCP server is hosted, not a desktop bridge.** Press Host External Agent in the app, connect Claude,
 ChatGPT, or any MCP client, and the assistant can read your project, write code, generate assets, and run the game, live, in your browser.
+Or give your AI an agent session link: it opens Shiny Gen in its own browser and works there, with nothing
+open on your side ([how](docs/mcp.md#let-your-ai-run-shiny-gen-itself-nothing-open-on-your-side)).
 Other game-engine MCP integrations bridge to a desktop editor on your machine; Shiny Gen's is hosted,
 with nothing to install.
 
@@ -154,7 +156,9 @@ build, edit, and play-test your project, live in your browser. There is nothing 
 First start hosting in Shiny Gen, once per session: open your game at [shinygen.ai](https://shinygen.ai),
 open the **Agent** tab, tap the model name to open the AI model picker, choose **Connect external model
 with MCP**, and press **Host External Agent**. The app shows "Waiting for your AI to connect". Your
-assistant cannot connect until you do this. Then connect from your client:
+assistant cannot connect this way until you do this, and it works while that app stays open. (To let
+your AI work with your app closed, give it an agent session link instead: see [docs/mcp.md](docs/mcp.md).)
+Then connect from your client:
 
 ```
 claude mcp add --transport http shinygen https://mcp.shinygen.ai/mcp
@@ -230,7 +234,12 @@ See [Gems and pricing](docs/gems-and-pricing.md) and [shinygen.ai/pricing](https
 
 - **Not a hosted prototype box:** your game is a real game you own, not a clip locked to one page.
 - **Not just a 3D renderer** like Three.js: it's a whole game engine, so you don't hand-code physics, scenes, or tooling.
-- **Not a desktop download**: it runs in the browser, and as an app on the App Store and Google Play.
+- **Not a desktop download**: the web app is the desktop version, with the full engine and editors in your
+  browser on Windows, Mac, Linux, and Chromebooks (about 17 MB on first load), and it is an app on the App
+  Store and Google Play. A game you make is exported for the web or as a retro file (any one purchase,
+  from $2.99), not as a native app. There is no source download: game code is real GDScript you can read
+  and copy in the app, but it runs on our own Godot 4.6.2 fork with a lot added, so it would not run in
+  stock Godot.
 - **Not a Godot plugin:** it's a standalone product built on Godot; you never install Godot.
 - **Not related to [Shiny](https://shiny.posit.co/)**, the R/Python web framework by Posit.
 - **Not related to** Pokémon shiny hunting.

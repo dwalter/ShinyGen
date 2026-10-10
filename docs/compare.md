@@ -30,7 +30,7 @@ Other tools vary and change often, so their columns describe the kind of tool, n
 | | Shiny Gen | Prompt-to-play websites | Desktop AI engines | AI assistant + desktop engine |
 |---|---|---|---|---|
 | Where you make games | Browser, iPhone and iPad, Android, Retroid-class handhelds | Browser | Desktop computer | Desktop computer |
-| Install | None in the browser | None | An app to install | An engine and an assistant |
+| Install | None: the web app is the desktop version (Windows, Mac, Linux, Chromebook), about 17 MB to load | None | An app to install | An engine and an assistant |
 | Engine | Godot (real GDScript) or our GBA, GBC, N64, GameCube, and DS engines | The site's own runtime | Usually a real engine | Any engine you install |
 | AI art, 3D, sound, music | Built in, in the same project | Often built in | Often built in | Separate tools |
 | AI plays and tests its game | Yes: runs it, takes screenshots, presses the controls, reads the errors | Varies | Varies | Only if you wire it up |
@@ -52,7 +52,12 @@ Other tools vary and change often, so their columns describe the kind of tool, n
 - **A whole engine in the browser.** Godot with physics, scenes, input, and audio, on a WebGPU
   renderer, so there is no engine to build or install.
 - **Your own AI, hosted.** Connect Claude or ChatGPT to `mcp.shinygen.ai` and it builds in your live
-  project, with nothing to install.
+  project, with nothing to install. Host it from your open app, or give it an agent session link and it
+  runs Shiny Gen in its own browser while your app stays closed ([how](https://shinygen.ai/docs/mcp#agent-session)).
+- **No desktop install.** The web app is the desktop version: the full engine and editors in your
+  browser on Windows, Mac, Linux, and Chromebooks, and the first load is about 17 MB. Phones and tablets
+  get the iPhone, iPad, and Android apps. (A game you make is exported for the web or as a retro file,
+  not as a native app; exporting needs any one purchase, from $2.99.)
 - **You own your games** and may use them commercially
   ([Terms of Service](https://shinygen.ai/terms-of-service), section 4).
 
@@ -72,11 +77,14 @@ Other tools vary and change often, so their columns describe the kind of tool, n
 - Web export from the iPhone, iPad, or Android app (it is in the web app; retro ROM, .dol, and .nds
   downloads also work in the iPhone and iPad app).
 - Saving a retro ROM, .dol, or .nds file from the Android app: download it from a browser for now.
-- A connected AI assistant with Shiny Gen closed: it works while the app is open and hosting it.
+- A download of a game's source as a project. The code is real GDScript you can read and copy in the
+  app, but it runs on Shiny Gen's own engine, a Godot 4.6.2 fork with a lot added, so a source export
+  would not run in stock Godot. That is why exports are a web zip that runs anywhere, or a retro ROM,
+  .dol, or .nds file (exporting needs any one purchase, from $2.99).
 
 Comparisons describe kinds of tool as of the date below; individual products change often, so check
 each one's own site. Tell us about anything out of date at hello@shinygen.ai.
 
-*Last updated: October 9, 2026*
+*Last updated: October 10, 2026*
 
 [← Docs](README.md)
