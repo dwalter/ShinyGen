@@ -14,6 +14,7 @@ var label: Label
 var score = 0
 var time_left = ROUND_TIME
 var over = false
+var shown_seconds = -1
 
 func _ready():
     get_parent().set_design_size(960, 540)
@@ -74,6 +75,9 @@ func _process(delta):
             refresh()
 
     time_left -= delta
+    if int(time_left) != shown_seconds:
+        shown_seconds = int(time_left)
+        refresh()
     if time_left <= 0.0:
         time_left = 0.0
         over = true
