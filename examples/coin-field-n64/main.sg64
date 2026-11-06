@@ -1,0 +1,97 @@
+/* Coin Field: walk a box around a checkered floor and collect coins.
+   Uses no model files: everything is drawn with prim_box, so it builds in a blank game. */
+
+#define TILE   80
+#define GRID   8
+#define NCOIN  6
+#define SPEED  5.0fx
+#define MAXP   639                   /* the floor is 640 units across */
+
+u32 arena[2048 * 4];                 /* four words a vertex */
+
+s32 coin_x[NCOIN] = { 200, 360, 520, 120, 280, 440 };
+s32 coin_z[NCOIN] = { 200, 120, 360, 440, 280, 520 };
+u8  got[NCOIN];
+
+s32 px, pz;
+s32 score;
+fx  spin;
+
+void draw_floor(void)
+{
+    s32 i, j;
+    u32 c;
+    for (i = 0; i < GRID; i++) {
+        for (j = 0; j < GRID; j++) {
+            if (((i + j) & 1) == 0) { c = 0x3C5A44FFu; } else { c = 0x4A6B52FFu; }
+            prim_box(i * TILE + TILE / 2, -2, j * TILE + TILE / 2, TILE / 2, 2, TILE / 2, 0.0fx, c);
+        }
+    }
+}
+
+void main(void)
+{
+    sg64_dl dl;
+    sg64_vec3 eye;
+    sg64_vec3 at;
+    sg64_vec3 sun;
+    s32 i, dx, dz;
+
+    sys_init(30);
+    cam_perspective(0.1666fx, 32.0fx, 2048.0fx);
+    sun = vec_make(0.4fx, 0.8fx, 0.4fx);
+    light_dir(sun, 0xFFF2D0FFu);
+    light_ambient(0x505868FFu);
+
+    px = 40;
+    pz = 40;
+    score = 0;
+    spin = 0.0fx;
+
+    for (;;) {
+        frame_begin(&dl, 0x203040FFu);          /* waits, clears, polls the pad */
+
+        px = px + fx_to_int(pad_stick_x() * SPEED);
+        pz = pz - fx_to_int(pad_stick_y() * SPEED);
+        if (px < 0) { px = 0; }
+        if (pz < 0) { pz = 0; }
+        if (px > MAXP) { px = MAXP; }
+        if (pz > MAXP) { pz = MAXP; }
+        spin = spin + 0.01fx;                   /* a turn wraps by itself */
+
+        for (i = 0; i < NCOIN; i++) {
+            if (got[i] == 0) {
+                dx = px - coin_x[i];
+                dz = pz - coin_z[i];
+                if (dx * dx + dz * dz < 30 * 30) {
+                    got[i] = 1;
+                    score = score + 1;
+                }
+            }
+        }
+
+        eye = vec_make(fx_from_int(px), 260.0fx, fx_from_int(pz + 340));
+        at  = vec_make(fx_from_int(px), 0.0fx, fx_from_int(pz));
+        cam_look(eye, at);                      /* one camera per frame */
+
+        prim_arena(&arena[0], 2048u);
+        prim_mode(SG64_MODE_OPAQUE_SOLID_LIT);
+        draw_floor();
+        for (i = 0; i < NCOIN; i++) {
+            if (got[i] == 0) {
+                prim_box(coin_x[i], 18, coin_z[i], 10, 10, 10, spin, 0xFFD030FFu);
+            }
+        }
+        prim_box(px, 14, pz, 12, 12, 12, 0.0fx, 0xE8742AFFu);
+        prim_flush();
+
+        text_color(0xFFFFFFFFu);                /* the 2D layer comes after all the 3D */
+        text_print(8, 8, "COINS");
+        text_print_int(64, 8, score);
+        if (score == NCOIN) {
+            text_print(112, 112, "ALL COINS!");
+        }
+
+        frame_end(&dl);                         /* finishes, kicks, waits, swaps */
+    }
+}

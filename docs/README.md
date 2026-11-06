@@ -15,6 +15,9 @@ New here? Read [What is Shiny Gen?](what-is-shiny-gen.md) first, then pick a gui
 | [Shiny Gen vs other AI game makers](compare.md) | The kinds of AI game maker side by side, and when another tool is the better pick. |
 | [Embed games on your website](embed.md) | Run a Shiny Gen game on any web page with the `shinygen` npm package. |
 | [Examples](examples.md) | All 99 playable examples. |
+| [Game language reference](language/README.md) | GDScript, and sgba for the GBA, GBC and N64 (SG64) engines: functions and budgets. |
+| [MCP guide](mcp/README.md) | Setup, tools, example prompts and an example tool sequence. |
+| [Source examples](../examples/README.md) | Small open-licensed games to paste into a new game. |
 | [GDScript API reference](gdscript-api-reference.md) | The exact supported API surface for game code. |
 | [Support](support.md) | Contact, technical requirements, and bug reports. |
 

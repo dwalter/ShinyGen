@@ -1,0 +1,88 @@
+/* Reaction Timer: wait for GO, then press A as fast as you can.
+   A text-only GBA game: no art, no sound, so it builds in a blank game. */
+
+#define MODE_TITLE  0
+#define MODE_WAIT   1
+#define MODE_GO     2
+#define MODE_RESULT 3
+#define MODE_EARLY  4
+
+s32 mode;
+s32 ticks;      /* frames spent in this mode */
+s32 delay;      /* frames to wait before GO */
+s32 last;       /* last reaction, in frames */
+s32 best;       /* best reaction, in frames (0 = none yet) */
+s32 dirty;      /* 1 when the screen needs redrawing */
+
+void draw(void) {
+    text_clear();
+    text_print(8, 3, "REACTION TIMER");
+    if (mode == MODE_TITLE) {
+        text_print(7, 9, "PRESS A TO START");
+    }
+    if (mode == MODE_WAIT) {
+        text_print(10, 9, "WAIT...");
+    }
+    if (mode == MODE_GO) {
+        text_print(13, 9, "GO!");
+    }
+    if (mode == MODE_EARLY) {
+        text_print(6, 9, "TOO EARLY!");
+        text_print(5, 11, "A TO TRY AGAIN");
+    }
+    if (mode == MODE_RESULT) {
+        text_print(6, 9, "FRAMES:");
+        text_print_int_w(14, 9, last, 3);
+        text_print(5, 11, "A TO TRY AGAIN");
+    }
+    if (best > 0) {
+        text_print(6, 15, "BEST:");
+        text_print_int_w(12, 15, best, 3);
+    }
+    dirty = 0;
+}
+
+void init(void) {
+    text_init(1, 1, 29, TEXT_PAL_BANK);
+    mode = MODE_TITLE;
+    best = 0;
+    last = 0;
+    dirty = 1;
+    draw();
+    eng_video_on();            /* the screen is white until this is called */
+}
+
+void frame(void) {
+    ticks = ticks + 1;
+
+    if (mode == MODE_TITLE || mode == MODE_RESULT || mode == MODE_EARLY) {
+        if (key_hit(KEY_A)) {
+            rand_seed_frame();
+            delay = rand_range(60, 180);   /* one to three seconds */
+            ticks = 0;
+            mode = MODE_WAIT;
+            dirty = 1;
+        }
+    } else if (mode == MODE_WAIT) {
+        if (key_hit(KEY_A)) {
+            mode = MODE_EARLY;
+            dirty = 1;
+        } else if (ticks >= delay) {
+            mode = MODE_GO;
+            ticks = 0;
+            dirty = 1;
+        }
+    } else if (mode == MODE_GO) {
+        if (key_hit(KEY_A)) {
+            last = ticks;
+            if (best == 0 || last < best) { best = last; }
+            mode = MODE_RESULT;
+            dirty = 1;
+        }
+    }
+
+    if (dirty) { draw(); }
+
+    probe_game(0, (u32)mode);   /* lets a driving agent read the state without a screenshot */
+    probe_game(1, (u32)last);
+}

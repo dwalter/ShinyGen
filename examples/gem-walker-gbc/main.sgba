@@ -1,0 +1,127 @@
+/* A complete GBC game: walk, collect, save. No assets -- it paints its own
+   tiles -- so it compiles in a game that has no art yet.                   */
+
+#define WALL 1
+#define GEM  2
+#define GEMS 4
+#define SPEED 96          /* 96/256 of a pixel per frame */
+
+#define OBJ_PLAYER 0      /* which OAM entry the player is */
+
+u8  map_flags[32][32];    /* our own meaning for each cell */
+s16 px, py;               /* the player, in PIXELS */
+u16 sub_x, sub_y;         /* the sub-pixel remainder, in 1/256ths */
+u16 gems_left;
+u8  hud_dirty;
+u8  blank_tile, wall_tile, gem_tile;
+
+struct Save { s16 x; s16 y; u16 gems; };
+Save g_save;
+
+u8 cell(s16 x, s16 y) {
+    s16 tx = x >> 3;
+    s16 ty = y >> 3;
+    if (tx < 0 || ty < 0 || tx >= BG_MAP_W || ty >= BG_MAP_H) { return WALL; }
+    return map_flags[(u8)ty][(u8)tx];
+}
+
+bool blocked(s16 x, s16 y) {
+    if (cell(x, y) == WALL) { return true; }
+    if (cell((s16)(x + 7), y) == WALL) { return true; }
+    if (cell(x, (s16)(y + 7)) == WALL) { return true; }
+    if (cell((s16)(x + 7), (s16)(y + 7)) == WALL) { return true; }
+    return false;
+}
+
+void step(u16 speed, s16 *pos, u16 *sub, s16 dir) {
+    u16 acc = (u16)(*sub + speed);
+    while (acc >= 256) {
+        acc = (u16)(acc - 256);
+        if (dir > 0) {
+            if (!blocked((s16)(*pos + 1), py)) { *pos = (s16)(*pos + 1); }
+        } else {
+            if (!blocked((s16)(*pos - 1), py)) { *pos = (s16)(*pos - 1); }
+        }
+    }
+    *sub = acc;
+}
+
+void draw_hud(void) {
+    text_win(1, 0, "GEMS");
+    print_int_win(6, 0, gems_left, 2);
+    hud_dirty = 0;
+}
+
+void init(void) {
+    u8 tx, ty, i;
+
+    /* Four colours a cell, eight palettes; palette 0 for the world, 7 for text. */
+    pal_set_bg(0, 0x0000u, 0x2108u, 0x4E73u, 0x7FFFu);
+    pal_set_bg(7, 0x0000u, 0x2108u, 0x4E73u, 0x7FFFu);
+    pal_set_obj(0, 0x0000u, 0x001Fu, 0x03E0u, 0x7FFFu);
+
+    text_init(7);                 /* expands the font into VRAM, once */
+    blank_tile = text_tile_base();            /* ' ' is the first glyph */
+    wall_tile  = (u8)(text_tile_base() + 3);  /* '#' */
+    gem_tile   = (u8)(text_tile_base() + 10); /* '*' */
+
+    for (ty = 0; ty < BG_MAP_H; ty = (u8)(ty + 1)) {
+        for (tx = 0; tx < BG_MAP_W; tx = (u8)(tx + 1)) {
+            u8 edge = (ty == 0 || tx == 0
+                       || ty == BG_MAP_H - 1 || tx == BG_MAP_W - 1) ? 1u : 0u;
+            map_flags[ty][tx] = edge ? (u8)WALL : 0u;
+            bg_map_set(tx, ty, edge ? wall_tile : blank_tile, BG_BANK1 | 7u);
+        }
+    }
+    for (i = 0; i < GEMS; i = (u8)(i + 1)) {
+        u8 gx = (u8)(4 + i * 3);
+        map_flags[5][gx] = GEM;
+        bg_map_set(gx, 5, gem_tile, BG_BANK1 | 7u);
+    }
+    bg_map_upload();              /* one push, under forced blank, in init() */
+
+    px = 24;
+    py = 72;
+    gems_left = GEMS;
+    if (save_exists(0)) {
+        if (save_read(0, &g_save, sizeof(Save))) {
+            px = g_save.x; py = g_save.y; gems_left = g_save.gems;
+        }
+    }
+    win_show(1);
+    win_pos(0, 128);
+    draw_hud();
+    eng_video_on();               /* the screen stays off (and frame() panics) until this */
+}
+
+void frame(void) {
+    u8 tx, ty;
+
+    if (key_down(KEY_RIGHT)) { step(SPEED, &px, &sub_x, 1); }
+    if (key_down(KEY_LEFT))  { step(SPEED, &px, &sub_x, -1); }
+    if (key_down(KEY_DOWN))  { if (!blocked(px, (s16)(py + 1))) { py = (s16)(py + 1); } }
+    if (key_down(KEY_UP))    { if (!blocked(px, (s16)(py - 1))) { py = (s16)(py - 1); } }
+
+    tx = (u8)((px + 4) >> 3);
+    ty = (u8)((py + 4) >> 3);
+    if (map_flags[ty][tx] == GEM) {
+        map_flags[ty][tx] = 0;
+        bg_set_tile(tx, ty, blank_tile);
+        if (gems_left > 0) { gems_left = (u16)(gems_left - 1); }
+        hud_dirty = 1;
+    }
+
+    if (key_hit(KEY_START)) {
+        g_save.x = px; g_save.y = py; g_save.gems = gems_left;
+        save_write(0, &g_save, sizeof(Save));
+        hud_dirty = 1;
+    }
+
+    spr_set(OBJ_PLAYER, px, py, blank_tile, 0);
+    spr_hide_from(1);             /* one sprite this frame; put the rest away */
+
+    if (hud_dirty) { draw_hud(); }
+
+    probe_game(0, (u32)(((u16)py << 9) | ((u16)px & 0x1FFu)));
+    probe_game(1, (u32)gems_left);
+}

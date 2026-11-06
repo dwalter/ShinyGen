@@ -19,8 +19,26 @@ Available on the [App Store](https://apps.apple.com/app/id6738890511) and [Googl
 
 ---
 
-This repository is the **public documentation** for Shiny Gen. The canonical, always-current version
-of every page lives at [shinygen.ai](https://shinygen.ai), and each doc here links to its source.
+**Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.**
+It has six engines (the Godot Engine with GDScript, plus our own GBA, GBC, N64, GameCube and DS
+engines that compile to a real ROM, .dol or .nds file), built-in editors for code, images, 3D models
+and audio, and a hosted MCP server so Claude, ChatGPT or any MCP client can build in your project and
+play-test it.
+
+This repository is the **public documentation and examples** for Shiny Gen. The canonical,
+always-current version of every page lives at [shinygen.ai](https://shinygen.ai), and each doc here
+links to its source.
+
+## Map of this repository
+
+| Path | What is in it |
+|---|---|
+| [docs/](docs/README.md) | Guides: what Shiny Gen is, getting started, FAQ, pricing, embed, comparison, support |
+| [docs/language/](docs/language/README.md) | Reference for the game languages: GDScript (Godot Engine) and sgba for the GBA, GBC and N64 (SG64) engines, with engine functions and budgets |
+| [docs/mcp/](docs/mcp/README.md) | Connect Claude or ChatGPT through MCP: setup, tools, example prompts and an example tool sequence |
+| [docs/gdscript-api-reference.md](docs/gdscript-api-reference.md) | The exact supported API surface for GDScript game code |
+| [examples/](examples/README.md) | Four small open-licensed example games (MIT) you can paste into a new game |
+| previews/ | Screenshots used by the docs |
 
 ## Start in 60 seconds
 
@@ -256,7 +274,7 @@ See [Gems and pricing](docs/gems-and-pricing.md) and [shinygen.ai/pricing](https
 You own the games and assets you create with Shiny Gen, and you can use them commercially, including
 selling them; Shiny Gen takes no revenue share. Exported games keep working if you stop using Shiny Gen.
 
-The documentation in this repository is licensed [CC BY 4.0](LICENSE). The Shiny Gen Engine itself
+The documentation in this repository is licensed [CC BY 4.0](LICENSE). The example games under `examples/` are licensed [MIT](examples/LICENSE). The Shiny Gen Engine itself
 (the `shinygen` npm package) is proprietary and governed by [its own license](LICENSE-ENGINE.txt):
 free to use, including commercially, to make games.
 
