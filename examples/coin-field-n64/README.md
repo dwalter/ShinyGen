@@ -1,6 +1,7 @@
 # Coin Field (N64 Engine, SG64 profile)
 
-Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
 
 A small 3D game that needs no model files. Move the orange box with the analog stick across a
 checkered floor and collect the six spinning coins. The camera follows from behind and above.

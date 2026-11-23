@@ -1,6 +1,7 @@
 # Gem Walker (GBC Engine)
 
-Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
 
 A whole GBC game with no art at all. It draws its world out of the font's own tiles, walks a sprite
 around it with tile collision, keeps a HUD in the window, and saves to the cartridge battery.

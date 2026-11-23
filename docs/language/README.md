@@ -1,6 +1,7 @@
 # The Shiny Gen game languages
 
-Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
 
 > Canonical site: **<https://shinygen.ai>**
 
@@ -23,7 +24,7 @@ and cannot play commercial or third-party ROMs.
 For the GBA, GBC and N64 engines the game is not a game scene and it is not GDScript. It is a single
 source file in **sgba**, a strict subset of C. Shiny Gen compiles that file to real machine code on the
 device and links it into a real cartridge image, which is what plays in the app and what you download
-as a ROM (downloading needs any one purchase; see [Gems and pricing](../gems-and-pricing.md)).
+as a ROM (downloading requires a purchase; see [Gems and pricing](../gems-and-pricing.md)).
 
 One language, three machines. The grammar, the type checker and the compiler are shared. Each
 machine gets a **profile** that narrows or widens it to match the hardware: integer widths, the fixed

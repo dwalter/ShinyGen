@@ -1,6 +1,7 @@
 # Shiny Gen examples
 
-Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
 
 Small, open-licensed example games written for the public from the [language docs](../docs/language/README.md).
 Each one needs no art or model files, so it builds in a brand-new game. They are licensed MIT

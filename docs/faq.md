@@ -11,24 +11,48 @@ Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, co
 built-in AI tools, in your browser or on your phone. Games are real projects you own, on a real engine:
 the Godot engine in GDScript, or one of five retro engines we built (GBA, GBC, N64, GameCube, and DS)
 whose games compile to a real file you can download (a ROM, a GameCube .dol, or a DS .nds). It is free
-to make, play, and share games; AI generation uses gems, and new accounts get free gems.
+to make, play, and share games; AI generation uses gems, and new accounts get 30 free gems.
 
 ## What engines can I make games for?
 
 You choose the engine when you start a game, and there are six. The Godot engine makes real Godot
 projects written in GDScript. The five retro engines are engines we built for GBA, GBC, N64, GameCube,
 and DS games, and each one compiles your game into a real file you can download and keep: a ROM for GBA,
-GBC, and N64, a .dol for GameCube, or a .nds for DS (exporting the file needs any one purchase, from a
-$2.99 starter pack). The retro engines are not emulators and not ROM loaders: they compile games you
+GBC, and N64, a .dol for GameCube, or a .nds for DS (exporting the file requires a purchase). The retro engines are not emulators and not ROM loaders: they compile games you
 make in Shiny Gen, and cannot play commercial or third-party ROMs.
+
+## Can AI make a Game Boy Advance (GBA) game?
+
+Yes. Start a new game in Shiny Gen, pick the GBA Engine and describe the game. The AI builds a real GBA
+game, then plays it with the keypad to find and fix bugs, and you keep changing it by chat. Exporting
+the .gba ROM requires a purchase. The ROM plays in GBA emulators and on a
+real Game Boy Advance through a flash cart (we have played them on a Game Boy Advance and a DS Lite,
+saves included). More: [AI GBA game maker](https://shinygen.ai/gba-ai).
+
+## Can I make a Game Boy Color (GBC) game with AI?
+
+Yes. Pick the GBC Engine when you start a game. The AI writes and compiles a real Game Boy Color game
+that you can play right away in the browser or the app. You can export the ROM (requires a purchase) and play it on real hardware through a flash cart. More:
+[AI Game Boy Color game maker](https://shinygen.ai/gbc-ai).
+
+## Can AI make a DS, N64, or GameCube game?
+
+Yes. Shiny Gen has a DS Engine that uses both screens, an N64 Engine, and a GameCube Engine, all engines
+we built. Each one compiles the game you describe into a real file you can download: a .nds for DS, a
+ROM for N64, and a .dol for GameCube. Exporting the file requires a purchase. More: [Export your game as a ROM](https://shinygen.ai/export-rom).
+
+## Is there a free AI game maker with no coding?
+
+Shiny Gen is one. Making, playing, and sharing games is free, and you describe the game in plain words
+instead of writing code; the AI builds it and plays it to fix bugs. AI generation uses gems, and new accounts get 30 free gems. Exporting a game as a file requires a purchase.
 
 ## Is Shiny Gen free to use?
 
 Yes. Making, playing, sharing, and remixing games is free, and no subscription is required. AI
-generation spends gems: new accounts start with free gems, and you can buy a $2.99 starter pack, gem
-packs that never expire, or an optional membership that adds monthly gems. Any one purchase also unlocks
-exporting your games as files (a web zip, a ROM, a .dol, or a .nds). If you connect your own Claude or
-ChatGPT, the code it writes costs no gems.
+generation spends gems: new accounts start with 30 free gems, once your gems run out you get one free AI
+agent prompt each day, and you can buy a $2.99 starter pack, gem
+packs that never expire, or an optional membership that adds monthly gems. Exporting your games as files (a web zip, a ROM, a .dol, or a .nds) requires a purchase. If you connect your own Claude or
+ChatGPT, the code it writes costs no gems. Prices: [shinygen.ai/pricing](https://shinygen.ai/pricing).
 
 ## Is Shiny Gen built on the Godot engine?
 
@@ -72,7 +96,7 @@ the browser, on desktop or mobile.
 The web app is the desktop version. The full engine and editors run in your browser on Windows, Mac,
 Linux, and Chromebooks, with nothing to install, and the first load is about 17 MB. Phones and tablets get
 the iPhone, iPad, and Android apps. On a Mac with Apple silicon, the iPad app also installs from the Mac App Store. This is about Shiny Gen itself: a game you make is exported for the
-web as a zip or as a retro ROM, .dol, or .nds file (exporting needs any one purchase, from $2.99), not as
+web as a zip or as a retro ROM, .dol, or .nds file (exporting requires a purchase), not as
 a native desktop or mobile app.
 
 ## Is there an AI game maker that works on web, Android, and iOS?
@@ -93,7 +117,7 @@ Multiplayer works inside Shiny Gen; a game exported for the web plays solo for n
 Yes. You own the games and assets you create with Shiny Gen, including AI-generated art, models, audio,
 and code, and the Terms of Service allow personal and commercial use. To sell a game, export it for the
 web as a zip and publish it on itch.io or any store or site that sells web games, or download a retro
-game's ROM, .dol, or .nds file. Exporting needs any one purchase, from a $2.99 starter pack, and Shiny
+game's ROM, .dol, or .nds file. Exporting requires a purchase, and Shiny
 Gen takes no revenue share. As with any game, you need the rights to whatever you put in it. You grant
 Shiny Gen a license to use your content to run and improve the service; see the
 [Terms of Service](https://shinygen.ai/terms-of-service), section 4.
@@ -109,8 +133,9 @@ Yes. In the web app, open the Share menu on a game you own and choose **Export f
 zip you can upload to itch.io or any web host. The exported game makes no calls to Shiny Gen, its engine
 version is pinned so it keeps working the same way after we update, and once a player has loaded it, it
 also plays offline. For a game on a retro engine you can download the file you own: a ROM (GBA, GBC,
-N64), a .dol (GameCube), or a .nds (DS). Exporting needs any one purchase, from a $2.99 starter pack.
-Every game can also be shared free with a link, and embedded on the web with the `shinygen` npm package.
+N64), a .dol (GameCube), or a .nds (DS). Exporting requires a purchase.
+In the Android app, version 1.1.38 or later saves the file; on an older version, update the app or use
+a browser. Every game can also be shared free with a link, and embedded on the web with the `shinygen` npm package.
 
 ## Can I open a Shiny Gen game in the desktop Godot editor?
 
@@ -123,7 +148,7 @@ export it for the web, or download the ROM, .dol, or .nds of a retro-engine game
 Not as a project download. Your game's code is real GDScript you can read and copy in the app, but
 it runs on Shiny Gen's own engine, a Godot 4.6.2 fork with a lot added, so a source export would not run
 in stock Godot. That is why exports are a web zip that runs anywhere, or a retro ROM, .dol, or .nds file.
-Exporting needs any one purchase, from a $2.99 starter pack.
+Exporting requires a purchase.
 
 ## What happens to my games if I stop using Shiny Gen, or if it shuts down?
 
@@ -169,23 +194,63 @@ A connected assistant can read your project, write and edit game code, generate 
 3D models, and audio, and play the game it built: it runs it, takes screenshots, presses the controls,
 and reads the game's errors, so it can find and fix its own bugs. Permissions are scoped and revocable.
 
-## How is Shiny Gen different from Rosebud AI?
+## Does connecting my own AI cost anything?
 
-Rosebud AI is a fast way to prompt a playable browser prototype that lives on Rosebud's platform. Shiny
-Gen also builds playable games from a description in the browser, but on the real Godot engine, with
-GDScript code you can open, edit, own, and export for the web to run anywhere. Rosebud is excellent for
-quick experiments; Shiny Gen is built for games you keep.
+Connecting is free, and the code a connected assistant writes costs no gems, because it runs on your own
+AI plan; only the AI generation it runs spends gems, with a daily gem cap. Accounts that have never made
+a purchase get a one-time free allowance of assistant actions that change something (currently 100). It
+does not reset. Reading is never limited, and any purchase, from the $2.99 starter pack, removes the
+allowance for good. Details: [Connect Claude or ChatGPT](mcp.md).
 
-## How is Shiny Gen different from building with Three.js?
+## Why use Shiny Gen instead of just asking Claude or ChatGPT to make a game?
 
-Three.js is a JavaScript 3D rendering library; with it, you hand-code everything else: physics, input,
-scenes, and tooling. Shiny Gen puts a whole game engine (Godot) in the browser, with physics, scenes,
-input, audio, and editors included, and AI that writes the GDScript. If you want full manual control of
-a renderer, Three.js is great; if you want a complete game without building an engine, that is Shiny
-Gen.
+You can use both. Asked directly, a general AI assistant usually gives you a one-file web game in the
+chat, or code for an engine you install, run, and test yourself. Shiny Gen adds what sits around the
+code:
 
-For a fuller comparison with other kinds of AI game maker, including when another tool is the better
-pick, see [Shiny Gen vs other AI game makers](compare.md).
+- A whole game engine already running in your browser and in the iPhone, iPad, and Android apps: Godot,
+  or our GBA, GBC, N64, GameCube, and DS engines, which compile your game to a file you can download.
+- AI art, 3D models, sound, and music built into the same project.
+- An agent that plays the game it made: it takes screenshots, presses the controls, and reads the
+  errors, then fixes what is broken.
+- Map, sprite, and code editors, so you can change one thing without regenerating the whole game.
+- Share links, multiplayer by link or join code, and web or retro-file export (exporting requires a purchase).
+
+If you already pay for Claude or ChatGPT, connect it to Shiny Gen over [MCP](mcp.md) and it builds in
+your live project; the code it writes costs no gems. Asking an assistant directly is still a good fit
+for a tiny one-screen game, for any language or engine you like, or for a native desktop or app-store
+build, which Shiny Gen does not make yet.
+
+## How is Shiny Gen different from Rosebud?
+
+Rosebud is a browser-based AI game maker for quick 2D, 3D, and voxel games that you share by link. Shiny
+Gen is an AI game maker for the browser, iPhone, iPad, and Android that builds on a real engine (Godot in
+real GDScript, or five retro engines) and can give you a real console file. Rosebud is the better pick
+for a quick browser prototype shared by link, for remixing in its community, or for a Windows build for
+Steam on a Pro plan. Shiny Gen is the better fit for the same editor and agent on every device, real
+GDScript on the Godot engine, or a real retro-console file. Both are free to start. Full comparison:
+[Shiny Gen vs Rosebud](https://shinygen.ai/shiny-gen-vs-rosebud).
+
+## How is Shiny Gen different from GDevelop?
+
+GDevelop is a free, open-source, no-code game engine with an event system and native exports, with AI
+helpers added to a conventional editor. Shiny Gen starts from a description instead: an AI agent builds
+the game, plays it, and fixes errors, on the Godot engine or one of five retro engines. GDevelop is the
+better pick for full control of your game's logic through events and native publishing to desktop and
+mobile. Shiny Gen is the better fit for starting from a description, having an agent build and test the
+game, or making a real retro-console game. Both are free to start. Full comparison:
+[Shiny Gen vs GDevelop](https://shinygen.ai/shiny-gen-vs-gdevelop).
+
+## How is Shiny Gen different from building with a web 3D library?
+
+A web 3D library gives you a renderer; with it, you hand-code everything else: physics, input, scenes,
+and tooling. Shiny Gen puts a whole game engine (Godot) in the browser, with physics, scenes, input,
+audio, and editors included, and AI that writes the GDScript. If you want full manual control of a
+renderer, a library is a good fit; if you want a complete game without building an engine, that is
+Shiny Gen.
+
+For more, including when another tool is the better pick, see [Shiny Gen compared](compare.md) and
+[AI game makers compared](https://shinygen.ai/compare).
 
 ## Can I import my own images into Shiny Gen?
 
@@ -217,6 +282,6 @@ Godot editor. You do not need Godot installed; everything runs in your browser a
 Still curious? Read [What is Shiny Gen?](what-is-shiny-gen.md) or just [start
 playing](https://shinygen.ai/play).
 
-*Last updated: October 10, 2026*
+*Last updated: November 23, 2026*
 
 [← Docs](README.md)

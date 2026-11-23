@@ -2,6 +2,9 @@
 
 > Canonical version: **<https://shinygen.ai/docs/mcp>**
 
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
+
 Shiny Gen ships a hosted MCP server at `https://mcp.shinygen.ai/mcp`. Connect an AI assistant (Claude,
 ChatGPT, or any MCP client) and it can build, edit, and play-test your Shiny Gen project. There is
 nothing to install: unlike MCP integrations that bridge to a desktop engine running on your machine,
@@ -111,12 +114,11 @@ limits apply to an assistant working in your project:
 - **A daily gem cap.** Caps how many gems a connected assistant can spend in a single day, so an
   assistant left running cannot drain your balance. Every paid result reports your gems before, spent,
   and remaining.
-- **A weekly action allowance on the free tier.** Your first connection starts a **30-day
-  full-connector trial**. After that, free accounts get an allowance of assistant actions that change
-  something (writing code, generating, running the game) per week, currently 300, reset every
-  Monday (UTC). **Reading is never limited**, and **anyone who has made a purchase is not subject to
-  this allowance** at all.
-  The connector reports your current status and when the allowance resets.
+- **A one-time free allowance of actions.** Accounts that have never made a purchase get a one-time
+  allowance of assistant actions that change something (writing code, generating, running the game),
+  currently 100. It does not reset. **Reading is never limited**, and **any purchase, from the $2.99
+  starter pack, removes the allowance for good**. The connector reports how many actions are left, and
+  when the allowance is used up the assistant is told so in plain words.
 
 ## The AI agent built into the app
 
@@ -125,8 +127,9 @@ the same abilities described on this page: it reads your project, writes game co
 and play-tests what it builds. Connect Claude or ChatGPT when you would rather drive from a tool you
 already use; otherwise the in-app agent is right there.
 
-Both work the same way where it counts: generation spends gems, and the daily gem cap and the free-tier
-weekly allowance apply to both. The difference is who runs the model. An outside assistant runs on your
+Both work the same way where it counts: generation spends gems, and the daily gem cap applies to both.
+Once you have connected an outside assistant, the built-in agent's generations count toward the same
+free allowance. The difference is who runs the model. An outside assistant runs on your
 own AI plan, so its code editing costs no gems. The built-in agent's model runs on Shiny Gen, so each of
 its chat steps spends gems; the model picker shows what each model costs.
 
@@ -142,11 +145,13 @@ The same game-code surface is published here as the
 ## Safety
 
 - Permissions are scoped and revocable; disconnect at any time.
-- Everything the assistant does happens in your open tab; you watch edits live and can pause or stop it from the app.
+- Hosted from your app, everything the assistant does happens in your open tab; you watch edits live and can pause or stop it from the app. In an agent session it works in its own browser, and you can revoke it any time under **Agent access and spending**.
 - Writing code is free; only AI generation spends gems, with a daily gem cap for connected assistants. Every generation reports your remaining balance.
 
 ---
 
 Questions? See the MCP section of the [FAQ](faq.md) or [contact support](support.md).
+
+*Last updated: November 23, 2026*
 
 [← Docs](README.md)

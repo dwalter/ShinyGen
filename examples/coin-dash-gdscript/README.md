@@ -1,6 +1,7 @@
 # Coin Dash (GDScript)
 
-Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
 
 A complete 2D game on the Godot Engine in one script, with no asset files. Steer the square with WASD,
 the arrow keys, a controller or the on-screen stick, and collect coins before 30 seconds run out.

@@ -1,6 +1,7 @@
 # Reaction Timer (GBA Engine)
 
-Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
 
 A small text-only game in the GBA profile of sgba. Press A to start, wait for GO, then press A as fast
 as you can. The result is in frames (about 60 a second) and the best run is kept for the session.

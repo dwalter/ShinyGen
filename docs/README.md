@@ -1,6 +1,8 @@
 # Shiny Gen Docs
 
-Shiny Gen is an AI game maker that runs in your browser, built on the Godot engine.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone. Games run on the Godot engine or on one of five
+retro engines (GBA, GBC, N64, GameCube, and DS).
 New here? Read [What is Shiny Gen?](what-is-shiny-gen.md) first, then pick a guide.
 
 > Canonical version: **<https://shinygen.ai/docs>**
@@ -12,7 +14,7 @@ New here? Read [What is Shiny Gen?](what-is-shiny-gen.md) first, then pick a gui
 | [FAQ](faq.md) | Pricing and free gems, Godot and GDScript, platforms, ownership, export, and MCP. |
 | [Connect Claude or ChatGPT (MCP)](mcp.md) | Let an AI assistant build in your live project through the hosted MCP server. |
 | [Gems and pricing](gems-and-pricing.md) | What's free, what uses gems, and current prices. |
-| [Shiny Gen vs other AI game makers](compare.md) | The kinds of AI game maker side by side, and when another tool is the better pick. |
+| [Shiny Gen compared](compare.md) | Shiny Gen next to Rosebud and GDevelop, and when another tool is the better pick. |
 | [Embed games on your website](embed.md) | Run a Shiny Gen game on any web page with the `shinygen` npm package. |
 | [Examples](examples.md) | All 99 playable examples. |
 | [Game language reference](language/README.md) | GDScript, and sgba for the GBA, GBC and N64 (SG64) engines: functions and budgets. |
@@ -23,4 +25,6 @@ New here? Read [What is Shiny Gen?](what-is-shiny-gen.md) first, then pick a gui
 
 ---
 
-[← Back to the main page](../README.md) · [shinygen.ai](https://shinygen.ai) · [▶ Play](https://shinygen.ai/play)
+More on the site: [Pricing](https://shinygen.ai/pricing) · [AI GBA game maker](https://shinygen.ai/gba-ai) · [AI Game Boy Color game maker](https://shinygen.ai/gbc-ai) · [Godot AI](https://shinygen.ai/godot-ai) · [Export your game as a ROM](https://shinygen.ai/export-rom) · [Compare](https://shinygen.ai/compare)
+
+[← Back to the main page](../README.md) · [shinygen.ai](https://shinygen.ai) · [Play](https://shinygen.ai/play)

@@ -1,6 +1,7 @@
 # Connect Claude or ChatGPT to Shiny Gen with MCP
 
-Shiny Gen is an AI game maker: describe a game and the AI builds it, on web, iOS and Android.
+Shiny Gen is an AI game maker: describe a game, play it, and edit its assets, code, and world with
+built-in AI tools, in your browser or on your phone.
 
 > Canonical version: **<https://shinygen.ai/docs/mcp>**. The shorter overview is [../mcp.md](../mcp.md).
 
@@ -41,7 +42,10 @@ Authorization uses OAuth 2.1 with PKCE. Scopes:
 | `projects.write` | Write and edit game code and asset documents. Code edits are free. |
 | `assets.generate` | Run AI generation (images, 3D models, audio). Spends gems, with a daily cap for connected assistants. |
 
-Writing code is free; only AI generation spends gems. See [Gems and pricing](../gems-and-pricing.md).
+Writing code is free; only AI generation spends gems. Accounts that have never made a purchase get a
+one-time free allowance of actions that change something (currently 100); it does not reset, reading is
+never limited, and any purchase, from the $2.99 starter pack, removes it. See
+[Gems and pricing](../gems-and-pricing.md).
 
 ## Start every session the same way
 
@@ -73,7 +77,7 @@ Writing code is free; only AI generation spends gems. See [Gems and pricing](../
 | `get_run_state` | Live errors, history, `print()` output and the game's `report_status` values. |
 | `create_asset`, `edit_asset`, `cartridge_set_asset` | Make images, 3D models, audio and sprites, or adopt a picture into a cartridge. |
 | `render_views` | Render views of a 3D model to check it. |
-| `export_cartridge` | Write a cartridge game to a ROM file (export needs any one purchase). |
+| `export_cartridge` | Write a cartridge game to a ROM file (export requires a purchase). |
 | `get_share_link` | A link to the game. It cannot change who else may open it. |
 | `save_game` | Save to the cloud and wait. |
 
